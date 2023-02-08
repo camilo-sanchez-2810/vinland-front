@@ -1,0 +1,25 @@
+.container{
+    margin: 10px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+height: 9vh;
+}
+.anchorContainer{
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.anchor{
+    margin: 0 15px 0 15px; 
+    text-decoration: none;
+    color: #7D5034;
+}
+.anchor:hover{
+    transition: 0.2s ;
+    font-size: 18px;
+}
