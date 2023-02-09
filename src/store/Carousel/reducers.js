@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import carouselActions from "./actions";
 
-const { getCarousel } = carouselActions
+const { get_carousel } = carouselActions
 
 const initialState = {
   products: []
@@ -9,9 +9,10 @@ const initialState = {
 
 const carouselReducers = createReducer(initialState, (builder) => {
   builder
-    .addCase(getCarousel.fulfilled, (state, action) => {
+    .addCase(get_carousel.fulfilled, (state, action) => {
+      console.log(action);
       const newState = {
-        comics: action.payload.response
+        products: action.payload.response
       }
       return newState
     })
