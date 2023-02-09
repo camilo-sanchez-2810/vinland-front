@@ -1,0 +1,32 @@
+[
+    {
+        "id":"id_del_producto1",
+        "title":"producto 1",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nisi libero esse nam, accusamus a nemo adipisci, aliquid, consectetur cum quod. Quia consectetur vel praesentium maxime maiores quos ipsa nihil!",
+        "photo":"/assets/images/viniloEjemplo.png"
+    },
+    {
+        "id":"id_del_producto2",
+        "title":"producto 2",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nisi libero esse nam, accusamus a nemo adipisci, aliquid, consectetur cum quod. Quia consectetur vel praesentium maxime maiores quos ipsa nihil!",
+        "photo":"/assets/images/viniloEjemplo.png"
+    },
+    {
+        "id":"id_del_producto3",
+        "title":"producto 3",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nisi libero esse nam, accusamus a nemo adipisci, aliquid, consectetur cum quod. Quia consectetur vel praesentium maxime maiores quos ipsa nihil!",
+        "photo":"/assets/images/viniloEjemplo.png"
+    },
+    {
+        "id":"id_del_producto4",
+        "title":"producto 4",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nisi libero esse nam, accusamus a nemo adipisci, aliquid, consectetur cum quod. Quia consectetur vel praesentium maxime maiores quos ipsa nihil!",
+        "photo":"/assets/images/viniloEjemplo.png"
+    },
+    {
+        "id":"id_del_producto5",
+        "title":"producto 5",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nisi libero esse nam, accusamus a nemo adipisci, aliquid, consectetur cum quod. Quia consectetur vel praesentium maxime maiores quos ipsa nihil!",
+        "photo":"/assets/images/viniloEjemplo.png"
+    }
+]
