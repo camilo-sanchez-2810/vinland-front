@@ -1,25 +1,28 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
-const getCarousel = createAsyncThunk('get-carousel', async () => {
-  try {
-    const comics = await axios.get('products.json')
-    console.log(comics.data.response)
-    return {
-      success: true,
-      response: comics.data.response
-    } 
-  } catch (error) {
-    return {
-      success: false,
-      response: {
-        error: error.message
+const get_carousel = createAsyncThunk(
+  'getCarousel', async () => {
+    try {
+      const products = await axios.get('http://localhost:8000/api/product/last')
+      return {
+        success: true,
+        response: products.data.response
+      } 
+    } catch (error) {
+      console.log(error);
+      return {
+        success: false,
+        response: {
+          error: error.message
+        }
       }
     }
   }
-})
+)
 
-const carouselActions = { getCarousel }
+const carouselActions = { get_carousel }
 
 export default carouselActions
+
+/*  */
