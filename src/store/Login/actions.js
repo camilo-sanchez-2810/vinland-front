@@ -3,7 +3,7 @@ import axios from 'axios'
 const apiUrl = 'http://localhost:8080/'
 
 const registrar_usuario = createAsyncThunk('registrar_usuario', async (data) => {
-    let url = `http://localhost:8080/api/users/signin`
+    let url = `${apiUrl}api/users/signup`
     try {
         let res = await axios.post(url,data)
         return { 
