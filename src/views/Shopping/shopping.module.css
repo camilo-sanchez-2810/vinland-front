@@ -24,6 +24,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
 }
 .searcher{
     height: 5vh;
@@ -89,4 +91,15 @@
 }
 .legend{
     width: 100%;
+}
+.products{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sorryContainer{
+    height:20vh;
+    display: flex;
+    align-items: center;
 }

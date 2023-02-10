@@ -6,7 +6,8 @@ const {get_all_products} = productsActions
 const initialState= {
     products: [],
     inputText: "",
-    genre: []
+    genre: [],
+    page: 1
 }
 
 const productsReducers = createReducer(
@@ -17,7 +18,8 @@ const productsReducers = createReducer(
                 const newState = {
                     products: action.payload.response,
                     text: action.payload.response.text,
-                    genre: action.payload.response.genre
+                    genre: action.payload.response.genre,
+                    page: action.payload.response.page
                 }
                 return newState
             })

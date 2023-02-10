@@ -20,10 +20,29 @@ export default function Shopping() {
 
     useEffect(() => {
         dispatch(get_all_products({ inputText:inputText.current?.value,
-                                    genre: filter?.toString()
+                                    genre: filter?.toString(),
+                                    page: pages
         }))
     }, [load, filter])
 
+    const prev = () => {
+        setPages(pages - 1)
+    }
+    const next = () => {
+        setPages(pages + 1)
+    }
+    const boton = () => {
+        let productLimit = allProducts.length
+        if(productLimit < 9){
+            /* return <button className="noMore">No more comics</button>; */
+        }else{
+/*             return (
+                <button onClick={next} className="buttonNext">
+                Next
+              </button>
+            ) */
+        }
+    }
     return (
     <div className={style.container}>
         <div className={style.titleContainer}>
@@ -37,14 +56,21 @@ export default function Shopping() {
         </div>
         <div className={style.shopContainer}>
             <div className={style.sndContainer}>
-                    {allProducts?.map((product) => {
+                    {allProducts.length === 0 
+                    ? 
+                    <div className={style.sorryContainer}>
+                        <h2>Lo sentimos, no encontramos el producto que esta buscando</h2>
+                    </div>
+                    :
+                    <div className={style.products}>
+                        {allProducts?.map((product) => {
                        return (
                         <div className={style.card}>
                             <div>
                                 <Anchor to={`/${product._id}`} className={style.productAnchor}><img className={style.productPhoto} src={product.photo} alt={product.name} /></Anchor>
                             </div>
                             <div className={style.legend}>
-                                <h2 className={style.productName}>{product.name}$</h2>
+                                <h2 className={style.productName}>{product.name}</h2>
                             </div>
                             <div className={style.containerCart}>
 
@@ -54,6 +80,8 @@ export default function Shopping() {
                         </div>
                        )
                     })}
+                    </div>
+                    }
             </div>
         </div>
     </div>
