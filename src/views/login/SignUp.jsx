@@ -44,7 +44,7 @@ export default function SignIn() {
                 className={styles.inputt}
                 type="text"
                 id="title"
-                placeholder="Firs Name"
+                placeholder="Nombre"
                 ref={firtName}
               />
             </label>
@@ -53,7 +53,7 @@ export default function SignIn() {
                 className={styles.inputt}
                 type="text"
                 id="description"
-                placeholder="Last Name"
+                placeholder="Apellido"
                 ref={lastName}
               />
             </label>
@@ -71,15 +71,15 @@ export default function SignIn() {
                 className={styles.inputt}
                 type="text"
                 id="description"
-                placeholder="Password"
+                placeholder="Contraseña"
                 ref={password}
               />
             </label>
-            <input onClick={(e)=>capture_data(e)} className={styles.ssubmit} type="submit" value="Sign up" />
+            <input onClick={(e)=>capture_data(e)} className={styles.ssubmit} type="submit" value="Crear usuario" />
           </form>
         </div>
-        <p className={styles.p1}>do you already have an account?</p>
-        <Anchor className={styles.button} to="/signin">Log In</Anchor>
+        <p className={styles.p1}>Ya tienes una cuenta?</p>
+        <Anchor className={styles.button} to="/signin">Iniciar sesión</Anchor>
       </div>
     </main>
   );
