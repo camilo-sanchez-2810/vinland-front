@@ -9,8 +9,8 @@ export default function Navbar() {
           <img src="/assets/images/logo.png" alt="logo" className={style.logo}/>
         </div>
         <div className={style.anchorContainer}>
-        <Anchor className={style.anchor}>Inicio</Anchor>
-        <Anchor className={style.anchor}>Tienda</Anchor>
+        <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>
+        <Anchor to={"/shopping"} className={style.anchor}>Tienda</Anchor>
         <Anchor className={style.anchor}>Mi Perfil</Anchor>
         <Anchor className={style.anchor}>Sign In</Anchor>
         <Anchor className={style.anchor}>Sign Up</Anchor>

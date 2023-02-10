@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../views/Home/Home";
 import Layout from "../layout/Layout";
+import Shopping from "../views/Shopping/Shopping";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -13,7 +14,7 @@ export const indexRouter = createBrowserRouter([
             },
             {
             path:"/shopping",
-
+            element: <Shopping/>
             }
     ]
     }
