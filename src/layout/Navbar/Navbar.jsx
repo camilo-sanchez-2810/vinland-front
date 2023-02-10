@@ -12,8 +12,8 @@ export default function Navbar() {
         <Anchor className={style.anchor}>Inicio</Anchor>
         <Anchor className={style.anchor}>Tienda</Anchor>
         <Anchor className={style.anchor}>Mi Perfil</Anchor>
-        <Anchor className={style.anchor}>Sign In</Anchor>
-        <Anchor className={style.anchor}>Sign Up</Anchor>
+        <Anchor className={style.anchor} to={"/signin"}>Sign In</Anchor>
+        <Anchor className={style.anchor} to={"/signup"}>Sign Up</Anchor>
         </div>
     </div>
   )
