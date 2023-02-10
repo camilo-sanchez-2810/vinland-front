@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btnContainer{
+    margin: 1rem;
+}
+.btn{
+    border: none;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: #7d503470;
+    color: white;
+}
+.btn:hover{
+    background-color: #64402a70;
+    transition: 0.5s ease-in-out;
+}

@@ -1,0 +1,68 @@
+.container{
+    min-height: 80vh;
+    background-color: #E7CFA0;
+}
+.inputContainer{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sndContainer{
+    background-color: rgba(206, 206, 206, 0.651);
+    background-position: center;
+    min-height: 60vh;
+    width: 90%;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.searcher{
+    height: 5vh;
+    width: 40%;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: 0.5px solid black;
+}
+.titleContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.title{
+    margin: 5vh 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.705);
+    border: none;
+    height: 20vh;
+    width: 45%;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productPhoto{
+    height: 20vh;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.productAnchor{
+    height: 20vh;
+}
+.productName{
+    margin-right: 1rem;
+}

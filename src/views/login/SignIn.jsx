@@ -49,18 +49,18 @@ export default function SignIn() {
                 className={styles.inputt}
                 type="text"
                 id="password"
-                placeholder="Password"
+                placeholder="Contraseña"
                 ref={password}
               />
             </label>
-            <input onClick={(e)=>capture_data(e)} className={styles.ssubmit} type="submit" value="Sign In" />
+            <input onClick={(e)=>capture_data(e)} className={styles.ssubmit} type="submit" value="Iniciar Sesión" />
           </form>
         </div>
         <div>
         <p className={styles.p1}>Still don't have an account?</p>
-         <Anchor className={styles.button1} to={"/signup"}>Sign up!</Anchor>
+         <Anchor className={styles.button1} to={"/signup"}>Crear usario!</Anchor>
          </div>
-        <Anchor className={styles.button} to="/">Go Home</Anchor>
+        <Anchor className={styles.button} to="/">Ir al inicio</Anchor>
       </div>
     </main>
   );
