@@ -1,0 +1,35 @@
+.container{
+    background-color: #E7CFA0;
+    min-height: 69vh;
+}
+.logo{
+    height: 15vh;
+    width: 30%;
+    margin-left: 1rem;
+}
+.bgContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.bg{
+    margin-top: 1rem;
+    width: 80%;
+    background-image: url(../../../public/assets/images/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35vh;
+    border-radius: 1rem;
+}
+.legend{
+    margin-left: 10rem;
+    color: #979797;
+}
+.carouselContainer{
+    display: flex;
+    justify-content: center;
+}

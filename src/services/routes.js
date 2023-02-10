@@ -12,6 +12,10 @@ export const indexRouter = createBrowserRouter([
             {
             path:"/",
             element: <Home/>
+            },
+            {
+            path:"/shopping",
+
             }
     ]
     },
