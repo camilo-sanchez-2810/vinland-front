@@ -21,8 +21,8 @@ export default function SignIn() {
     let data = {
       email: email.current.value,
       password: password.current.value,
-      firtName: firtName.current.value,
-      lastName: lastName.current.value,
+      first_name: firtName.current.value,
+      last_name: lastName.current.value,
     };
     let res = await dispatch(registrar_usuario(data));
     if (res.payload.success) {
@@ -35,7 +35,7 @@ export default function SignIn() {
       <div className={styles.div1}></div>
       <div className={styles.div2}>
         <div className={styles.h3contain}>
-          <h3 className={styles.h3form}>Sing Up</h3>
+          <h3 className={styles.h3form}>Crear usuario</h3>
         </div>
         <div>
           <form className={styles.form}>
@@ -78,7 +78,7 @@ export default function SignIn() {
             <input onClick={(e)=>capture_data(e)} className={styles.ssubmit} type="submit" value="Crear usuario" />
           </form>
         </div>
-        <p className={styles.p1}>Ya tienes una cuenta?</p>
+        <p className={styles.p1}>¿Ya tienes una cuenta?</p>
         <Anchor className={styles.button} to="/signin">Iniciar sesión</Anchor>
       </div>
     </main>
