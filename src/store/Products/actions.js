@@ -3,15 +3,19 @@ import axios from "axios";
 
 const get_all_products = createAsyncThunk(
     'get_all_products',
-    async() => {
+    async({inputText, genre}) => {
        try{
-        let response = await axios.get('http://localhost:8000/api/product')
+        let response = await axios.get(`http://localhost:8000/api/product?name=${inputText}&genre=${genre}&page=1`)
+        console.log(response);
+        console.log(inputText);
         return {
             success: true,
-            response: response.data.response
+            response: response.data.response,
+            text: inputText,
+            genre: genre
         }
        }catch(error){
-        console.log(error);
+console.log(error.response.data);
        }
     }
 )
