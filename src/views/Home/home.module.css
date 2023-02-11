@@ -13,7 +13,7 @@
     justify-content: center;
 }
 .bg{
-    margin-top: 1rem;
+    margin-top: 5vh;
     width: 80%;
     background-image: url(../../../public/assets/images/bgi.jpg);
     background-repeat: no-repeat;

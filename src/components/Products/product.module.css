@@ -19,3 +19,12 @@
     background-color: #64402a70;
     transition: 0.5s ease-in-out;
 }
+.btnClicked{
+    border: none;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: #4e3221a6;
+    color: white;
+}
