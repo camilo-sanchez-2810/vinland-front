@@ -31,13 +31,13 @@ export default function SignIn() {
       <div className={styles.div1}></div>
       <div className={styles.div2}>
         <div className={styles.h3contain}>
-          <h3 className={styles.h3form}>Sign In</h3>
+          <h3 className={styles.h3form}>Iniciar Sesión</h3>
         </div>
         <div>
           <form className={styles.form1}>
             <label className={styles.labelform} htmlFor="">
               <input
-                className={styles.inputt}
+                className={styles.inputt2}
                 type="text"
                 id="description"
                 placeholder="Email"
@@ -46,8 +46,8 @@ export default function SignIn() {
             </label>
             <label className={styles.labelform} htmlFor="">
               <input
-                className={styles.inputt}
-                type="text"
+                className={styles.inputt1}
+                type="password"
                 id="password"
                 placeholder="Contraseña"
                 ref={password}
@@ -57,7 +57,7 @@ export default function SignIn() {
           </form>
         </div>
         <div>
-        <p className={styles.p1}>Still don't have an account?</p>
+        <p className={styles.p1}>¿Aún no tienen cuenta?</p>
          <Anchor className={styles.button1} to={"/signup"}>Crear usario!</Anchor>
          </div>
         <Anchor className={styles.button} to="/">Ir al inicio</Anchor>
