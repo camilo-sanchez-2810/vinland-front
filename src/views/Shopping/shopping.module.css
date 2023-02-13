@@ -47,7 +47,7 @@
 .card{
     background-color: rgba(255, 255, 255, 0.144);
     border: none;
-    height: 45vh;
+    height: 48vh;
     width: 14vw;
     margin: 1rem;
     border-radius: 1rem;
@@ -73,6 +73,7 @@
     width: 100%;
     margin-right: 1rem;
     text-align: center;
+    font-size: 18px;
 }
 .carrito{
     display: flex;
@@ -102,4 +103,13 @@
     height:20vh;
     display: flex;
     align-items: center;
+}
+.productPrice{
+    width: 100%;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
 }

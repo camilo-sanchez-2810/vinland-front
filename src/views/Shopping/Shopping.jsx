@@ -74,7 +74,7 @@ export default function Shopping() {
                             </div>
                             <div className={style.containerCart}>
 
-                                <h2 className={style.productName}>{product.price}$</h2>
+                                <h2 className={style.productPrice}>{product.price}$</h2>
                                 <button className={style.carrito}><img src="/assets/images/cart2.png" alt="" /></button>
                             </div>
                         </div>
