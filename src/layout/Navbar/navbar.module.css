@@ -3,6 +3,7 @@
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    z-index: 30;
 }
 .logo{
 height: 9vh;
@@ -13,6 +14,7 @@ height: 9vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 30;
 }
 .cart {
     background: none;

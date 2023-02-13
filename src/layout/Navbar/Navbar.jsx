@@ -6,13 +6,13 @@ import authActions from '../../store/Login/actions'
 import '@fortawesome/fontawesome-svg-core'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Cart from '../../components/Cart/Cart'
 
 const { cerrar_sesion,iniciar_sesion } = authActions
 
-export default function Navbar() {
+export default function Navbar({handleShow, show}) {
   let { token,is_online } = useSelector(store => store.auth)
   const myMail = useSelector((store) => store.auth.email)
-  console.log(myMail)
   
 
   let dispatch = useDispatch()
@@ -33,7 +33,7 @@ export default function Navbar() {
         {is_online ? (
             <>
                 <Anchor to={"/profile"} className={style.anchor}>{myMail}</Anchor>
-                <button className={style.cart}><FontAwesomeIcon icon={faCartShopping} /></button>
+                <button className={style.cart} onClick={handleShow} ><FontAwesomeIcon icon={faCartShopping} /></button>
                 <span className={style.anchor} onClick={signout}>Cerrar Sesion</span>
                 
                 </>
@@ -44,6 +44,7 @@ export default function Navbar() {
             )}
         
         </div>
+        <Cart show={show} handleShow={handleShow}/>
     </div>
   )
 }
