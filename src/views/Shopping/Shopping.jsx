@@ -9,19 +9,19 @@ const {get_all_products} = productsActions
 
 
 export default function Shopping() {
-    const allProducts = useSelector((store) => store.products.products);
-    const text = useSelector((store) => store.products.text);
+    const allProducts = useSelector((store) => store?.products?.products);
+    const text = useSelector((store) => store.products?.text);
     const filter = useSelector((store) => store.filter?.filterGender);
-    console.log(filter)
     const dispatch = useDispatch()
     const [pages, setPages] = useState(1);
     const inputText = useRef(text)
     const [load, setLoad] = useState(false);
 
     useEffect(() => {
-        dispatch(get_all_products({ inputText:inputText.current?.value,
-                                    genre: filter?.toString(),
-                                    page: pages
+        dispatch(get_all_products({ 
+            inputText:inputText.current?.value,
+            genre: filter?.toString(),
+            page: pages
         }))
     }, [load, filter])
 
@@ -67,7 +67,7 @@ export default function Shopping() {
                        return (
                         <div className={style.card}>
                             <div>
-                                <Anchor to={`/${product._id}`} className={style.productAnchor}><img className={style.productPhoto} src={product.photo} alt={product.name} /></Anchor>
+                                <Anchor to={`/product/${product._id}`} className={style.productAnchor}><img className={style.productPhoto} src={product.photo} alt={product.name} /></Anchor>
                             </div>
                             <div className={style.legend}>
                                 <h2 className={style.productName}>{product.name}</h2>
