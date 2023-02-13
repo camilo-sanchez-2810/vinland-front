@@ -105,6 +105,7 @@ export default function Shopping() {
                 <div className={style.buttons}>
                     {boton2()}
                     {boton()}
+                    
                 </div>
             </div>
         </div>
