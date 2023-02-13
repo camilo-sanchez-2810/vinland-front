@@ -3,6 +3,9 @@ import style from './navbar.module.css'
 import { Link as Anchor } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
 import authActions from '../../store/Login/actions'
+import '@fortawesome/fontawesome-svg-core'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const { cerrar_sesion,iniciar_sesion } = authActions
 
@@ -26,10 +29,11 @@ export default function Navbar() {
         <div className={style.anchorContainer}>
         <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>
         <Anchor to={"/shopping"} className={style.anchor}>Tienda</Anchor>
-        <Anchor to={"/profile"} className={style.anchor}>Mi Perfil</Anchor>
+        
         {is_online ? (
             <>
-                <p className={style.anchor}>{myMail}</p>
+                <Anchor to={"/profile"} className={style.anchor}>{myMail}</Anchor>
+                <button className={style.cart}><FontAwesomeIcon icon={faCartShopping} /></button>
                 <span className={style.anchor} onClick={signout}>Cerrar Sesion</span>
                 
                 </>

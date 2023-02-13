@@ -6,7 +6,7 @@ const get_one = createAsyncThunk(
         "get_one",
         async(id) => {
             try{
-                const response = await axios.get(`http://localhost:8000/api/product/${id}`)
+                const response = await axios.get(`http://localhost:8080/api/product/${id}`)
                 return{
                     success: true,
                     response: response.data.response

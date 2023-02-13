@@ -14,6 +14,12 @@ height: 9vh;
     align-items: center;
     justify-content: space-around;
 }
+.cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7D5034;
+}
 .anchor{
     margin: 0 15px 0 15px; 
     text-decoration: none;
