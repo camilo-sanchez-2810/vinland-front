@@ -27,7 +27,7 @@ export default function Product_genre() {
       {genres?.map((genre, index) =>{
         return (
           <Genre_button
-          key={index}
+          key={genre?._id}
           name={genre.name}  
           id={genre._id}
           />
