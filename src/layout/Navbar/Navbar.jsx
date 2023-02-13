@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className={style.anchorContainer}>
         <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>
         <Anchor to={"/shopping"} className={style.anchor}>Tienda</Anchor>
-        <Anchor className={style.anchor}>Mi Perfil</Anchor>
+        <Anchor to={"/profile"} className={style.anchor}>Mi Perfil</Anchor>
         {is_online ? (
             <>
                 <p className={style.anchor}>{myMail}</p>
