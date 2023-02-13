@@ -2,7 +2,7 @@
     background-color: #ceb88e;
     padding-top: 4vh;
     width: 70%;
-    height: 65vh;
+    height: 40vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,14 +10,14 @@
     border-radius: 1rem;
 }
 .img{
-    height: 30vh;
+    height: 20vh;
     object-fit: contain;
     border-radius: 10%;
 }
 .carouselObject{
     border-radius: 1rem;
     width: 93%;
-    height: 50vh;
+    height: 25vh;
     align-items: center;
     display: flex;
     margin: 3rem;
