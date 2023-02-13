@@ -4,6 +4,7 @@ import Layout from "../layout/Layout";
 import Shopping from "../views/Shopping/Shopping";
 import SignIn from '../views/login/SignIn.jsx';
 import SignUp from '../views/login/SignUp.jsx';
+import AdminPanel from "../views/AdminPanel/AdminPanel";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -27,5 +28,9 @@ export const indexRouter = createBrowserRouter([
     {
         path :"/signup",
         element: <SignUp />
+    },
+    {
+        path :"/admin",
+        element: <AdminPanel />
     },
 ])

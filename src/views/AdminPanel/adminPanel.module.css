@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainPanel{
+    background-color: #E7CFA0;
+    width: 100%;
+}
+
+.navBar{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(31, 41, 42, 0.624);
+}
+
+.button2{
+    display: flex;
+    height: 13vh;
+    gap: 10px;
+
+}
+.buttones{
+    border-radius: 20px;
+    width: 6rem;
+    margin: 15px;
+    font-size: 18px;
+    background-color: #E7CFA0;
+    color: white;
+}
+
+.containH1P{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 70vh;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(31, 41, 42, 0.624);
+}
+
+.bgmain2{
+    height: 100vh;
+    background-color: #E7CFA0;
+}
+
+.container2{
+    position: absolute;
+    background-color: white;
+    top: 450px;
+    left: 10%;
+    height: 120vh;
+    width: 80vw;
+    border-radius: 20px;
+}
+
+.h2contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 20vh;
+}
+
+.h1Admin{
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+.h2Admin{
+    color: #000000;
+    font-size: 35px;
+    text-decoration: 8px underline;
+}
+
+/* .mainAdmin{
+    width: 100%;
+    
+}
+.bgmain{
+    background-image: url("../../../public/assets/images/adbg.jpeg");
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.containH1P{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 500vh;
+}
+
+
+
+.padmin{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.tableContain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table1{
+    border: 1px solid #EEEEF2;
+    background-color: #F9F9FC;
+    width: 100%;
+    color: black;
+}
+
+table , td, th {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+td {
+    border: none;
+    color: #484964;
+	padding: 3px;
+	width: 30px;
+	height: 25px;
+}
+th {
+	background: #F9F9FC;
+}
+.even {
+	background: #F9F9FC;
+}
+.odd {
+	background: #F9F9FC;
+}
+.imglogocompani{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.butonCompany {
+    border: 1px solid #EEEEF2;
+    border-bottom: 1px solid #4338CA;
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 15px 0 0 0;
+
+}
+.butonAuthor{ 
+    border: 1px solid #EEEEF2;
+    border-bottom: 1px solid #4338CA;
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+    height: 50px;
+    border-radius: 0 15px 0 0;
+}
+
+.trr{
+text-align: center;
+border: 1px solid #EEEEF2;
+
+}
+
+.divButton{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.rendeer{
+width: 600px;
+}
+.iconitoC{
+    width: 20px;
+    height: 20px;
+    margin: 0 6px ;
+}
+.iconitoA{
+    width: 10px;
+    height: 13px;
+    margin: 0 6px ;
+}
+.photoAutor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.tdLeft{
+    width: 10vw;
+    text-align: left;
+}
+
+.cm-toggle {
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+    margin: 0px;
+    text-align: center;
+	
+}
+
+.cm-toggle:after {
+	content: '';
+	width: 50px;
+	height: 23px;
+	display: inline-block;
+	background: rgba(113, 112, 112, 0.772);
+	border-radius: 18px;
+	clear: both;
+    position: absolute;
+    left: -10%;
+    top: -8%
+}
+
+.cm-toggle:before {
+	content: '';
+	width: 18px;
+	height: 18px;
+	display: block;
+	position: absolute;
+	left: 0;
+    top: 5%;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+
+.cm-toggle:checked:before {
+
+	left: 40%;
+	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.cm-toggle:checked:after {
+	background: #4338CA;
+}
+
+
+@media (max-width: 765px){
+  
+    .tableContain{
+        scale: 0.8 ;
+        transform-origin: 50% 0%;
+    }
+    .container2{
+        height: 100vh;
+    }
+
+}
+
+@media (max-width: 609px){
+    .tableContain{
+        scale: 0.7 ;
+        transform-origin: 50% 0%;
+    }
+}
+
+@media (max-width: 609px){
+    .tableContain{
+        scale: 0.6 ;
+        transform-origin: 50% 0%;
+    }
+}
+
+@media (max-width: 454px) {
+    .tableContain{
+        scale: 0.52 ;
+        transform-origin: 50% 0%;
+    }
+
+      .container2{
+        width: 90vw;
+      }
+}
+ */
