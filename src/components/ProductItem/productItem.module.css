@@ -1,10 +1,11 @@
 .card{
   background-color: rgba(255, 255, 255, 0.144);
   border: none;
-  height: 48vh;
+  height: 44vh;
   width: 14vw;
   margin: 1rem;
-  border-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,17 +15,19 @@
   display: flex;
 }
 .productPhoto{
-  height: 23vh;
+  height: 28vh;
   width: 14vw;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
   opacity: 0.9;
+  object-fit: inherit;
 }
 .productAnchor{
-  height: 20vh;
-  width: 16vw;
+  height: 27vh;
+  width: 18vw;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .productName{
   width: 100%;

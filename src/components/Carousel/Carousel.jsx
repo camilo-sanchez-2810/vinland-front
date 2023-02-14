@@ -8,7 +8,7 @@ import CaroueselItem from './CaroueselItem';
 const {get_carousel} = carouselActions
 
 export default function CarouselHome() {
-    const products = useSelector(store => store.carousel.products)
+    const products = useSelector(store => store.carousel?.products)
     const dispatch = useDispatch()
     console.log(products);
     
@@ -19,7 +19,7 @@ export default function CarouselHome() {
   return (
     <div className={style.carouselContainer}>
 
-        <Carousel infiniteLoop={true} autoPlay={true} showStatus={false} interval={7000} className={style.carousel}>
+        <Carousel infiniteLoop={true} autoPlay={true} showStatus={false} transitionTime={200} interval={4000} className={style.carousel}>
             {
                 products?.map((product) => {
                     return (<CaroueselItem name={product.name} description={product.description} photo={product.photo} key={product._id} />)
