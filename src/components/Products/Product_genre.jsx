@@ -11,7 +11,7 @@ export default function Product_genre() {
 
   const getData = async() => {
     try{
-      const response = await axios.get("http://localhost:8000/api/genre")
+      const response = await axios.get("http://localhost:8080/api/genre")
       setGenres(response.data.response)
     }
     catch(error){

@@ -4,7 +4,7 @@ import axios from "axios";
 const get_carousel = createAsyncThunk(
   'getCarousel', async () => {
     try {
-      const products = await axios.get('http://localhost:8000/api/product/last')
+      const products = await axios.get('http://localhost:8080/api/product/last')
       return {
         success: true,
         response: products.data.response

@@ -5,6 +5,7 @@ import genreReducers from "./Genre/reducers";
 import productsReducers from "./Products/reducers";
 import filterReducers from "./FilterGender/reducers";
 import productReducers from "./Product/reducers";
+import cartReducers from "./Cart/reducers";
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         products: productsReducers,
         auth: authReducer,
         filter: filterReducers,
-        product: productReducers
+        product: productReducers,
+        cart: cartReducers
     }
 })
 

@@ -3,6 +3,7 @@
     height: 10vh;
     display: flex;
     justify-content: space-between;
+    z-index: 30;
 }
 .logo{
 height: 9vh;
@@ -13,13 +14,21 @@ height: 9vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 30;
+}
+.cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7D5034;
 }
 .anchor{
     margin: 0 15px 0 15px; 
     text-decoration: none;
     color: #7D5034;
+    cursor: pointer;
+    transition: color ease .3s;
 }
 .anchor:hover{
-    transition: 0.2s ;
-    font-size: 18px;
+    color: #d68c5d;
 }
