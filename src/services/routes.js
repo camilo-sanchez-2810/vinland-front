@@ -4,7 +4,7 @@ import Layout from "../layout/Layout";
 import Shopping from "../views/Shopping/Shopping";
 import SignIn from '../views/login/SignIn.jsx';
 import SignUp from '../views/login/SignUp.jsx';
-import Profile from "../views/Profile/Profile";
+import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
 

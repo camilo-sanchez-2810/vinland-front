@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-const apiUrl = 'http://localhost:8080/'
+const apiUrl = 'http://localhost:8000/'
 
 const registrar_usuario = createAsyncThunk('registrar_usuario', async (data) => {
     let url = `${apiUrl}api/users/signup`
