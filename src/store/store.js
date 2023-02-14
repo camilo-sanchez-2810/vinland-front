@@ -5,16 +5,22 @@ import genreReducers from "./Genre/reducers";
 import productsReducers from "./Products/reducers";
 import filterReducers from "./FilterGender/reducers";
 import productReducers from "./Product/reducers";
+import cartReducers from "./Cart/reducers";
+import adminReducerAll from "./admin/reducers";
+
+const {adminReducers} = adminReducerAll
 import userReducers from "./User/reducers";
 
 const store = configureStore({
-    reducer: {
+        reducer: {
         carousel: carouselReducers,
         genres: genreReducers,
         products: productsReducers,
         auth: authReducer,
         filter: filterReducers,
         product: productReducers,
+        cart: cartReducers,
+        admin: adminReducers,
         user: userReducers,
     }
 })

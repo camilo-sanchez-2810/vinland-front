@@ -6,6 +6,7 @@ import SignIn from '../views/login/SignIn.jsx';
 import SignUp from '../views/login/SignUp.jsx';
 import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
+import AdminPanel from "../views/AdminPanel/AdminPanel";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -38,5 +39,9 @@ export const indexRouter = createBrowserRouter([
     {
         path :"/signup",
         element: <SignUp />
-    }
+    },
+    {
+        path :"/admin",
+        element: <AdminPanel />
+    },
 ])

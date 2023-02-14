@@ -13,7 +13,7 @@ export default function Product() {
     const [product, setProduct] = useState([])
     const data = async() => {
         try{
-            let response = await axios.get(`http://localhost:8000/api/product/${id}`)
+            let response = await axios.get(`http://localhost:8080/api/product/${id}`)
             setProduct(response.data.response)
         }
         catch(error){

@@ -4,7 +4,7 @@ import Product_genre from '../../components/Products/Product_genre'
 import { useSelector, useDispatch } from 'react-redux'
 import productsActions from '../../store/Products/actions'
 import { Link as Anchor } from 'react-router-dom'
-import genreActions from '../../store/Genre/actions'
+import ProductItem from '../../components/ProductItem/ProductItem'
 const {get_all_products} = productsActions
 
 
@@ -83,21 +83,9 @@ export default function Shopping() {
                     </div>
                     :
                     <div className={style.products}>
-                        {allProducts?.map((product) => {
+                        {allProducts?.map((product, index) => {
                        return (
-                        <div className={style.card}>
-                            <div>
-                                <Anchor to={`/product/${product._id}`} className={style.productAnchor}><img className={style.productPhoto} src={product.photo} alt={product.name} /></Anchor>
-                            </div>
-                            <div className={style.legend}>
-                                <h2 className={style.productName}>{product.name}</h2>
-                            </div>
-                            <div className={style.containerCart}>
-
-                                <h2 className={style.productPrice}>{product.price}$</h2>
-                                <button className={style.carrito}><img src="/assets/images/cart2.png" alt="" /></button>
-                            </div>
-                        </div>
+                        <ProductItem key={index} id={product._id} name={product.name} price={product.price} photo={product.photo} />
                        )
                     })}
                     </div>

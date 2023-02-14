@@ -5,7 +5,7 @@ const get_all_products = createAsyncThunk(
     'get_all_products',
     async({inputText, genre, page}) => {
        try{
-        let response = await axios.get(`http://localhost:8000/api/product?name=${inputText}&genre=${genre}&page=${page}`)
+        let response = await axios.get(`http://localhost:8080/api/product?name=${inputText}&genre=${genre}&page=${page}`)
         return {
             success: true,
             response: response.data.response,
