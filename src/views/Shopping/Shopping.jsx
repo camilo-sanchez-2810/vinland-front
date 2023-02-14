@@ -23,26 +23,45 @@ export default function Shopping() {
             genre: filter?.toString(),
             page: pages
         }))
-    }, [load, filter])
+    }, [load, filter, pages])
 
     const prev = () => {
         setPages(pages - 1)
     }
+    const boton2 = () => {
+        if (pages>1) {
+          return (
+            <button onClick={prev} className={style.prevNext}>
+              <img src="/assets/images/arrowSolid.png" alt="" className={style.imageBtn}/>
+            </button>
+          );
+            
+        }else{
+            return(
+                <div></div>
+            )
+        }
+      };
     const next = () => {
         setPages(pages + 1)
     }
     const boton = () => {
+    
         let productLimit = allProducts.length
-        if(productLimit < 9){
-            /* return <button className="noMore">No more comics</button>; */
-        }else{
-/*             return (
-                <button onClick={next} className="buttonNext">
-                Next
-              </button>
-            ) */
+
+        if (pages === 2) {
+          return (
+            <div></div>
+          );
+        } else {
+          return (
+            <button onClick={next} className={style.prevNext}>
+              <img src="/assets/images/rightSolid.png" alt="" className={style.imageBtn}/>
+            </button>
+          );
         }
-    }
+      };
+
 
     return (
     <div className={style.container}>
@@ -71,6 +90,11 @@ export default function Shopping() {
                     })}
                     </div>
                     }
+                <div className={style.buttons}>
+                    {boton2()}
+                    {boton()}
+                    
+                </div>
             </div>
         </div>
     </div>

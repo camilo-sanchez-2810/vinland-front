@@ -23,9 +23,11 @@
     border-top-left-radius: 5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding-top: 5vh;
     padding-bottom: 10vh;
+    flex-direction: column;
 }
 .searcher{
     height: 5vh;
@@ -112,4 +114,24 @@
     justify-content: center;
     text-align: center;
     font-size: 18px;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.prevNext{
+    height: 8vh;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: #dabb7e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.prevNext:hover{
+    background-color: #ac9465;
+    transition: 0.4s ease;
 }

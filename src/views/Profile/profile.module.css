@@ -1,0 +1,99 @@
+.container{
+    background-color: #E7CFA0;
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.infoContainer{
+    margin-left: 2.5vw;
+    background-color: #cab58b;
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    flex-direction: column;
+}
+.imgBg{
+    border-radius: 1rem;
+    margin-top: 4vh;
+    height: 20vh;
+    width: 90%;
+    background-image: url(../../../public/assets/images/bgi.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+.mailContainer{
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 2vw;
+    justify-content: space-around;
+}
+.text{
+    color: rgb(121, 92, 60);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btnContainer{
+    display: flex;
+    align-items: end;
+}
+.btn{
+    color: rgba(10, 10, 10, 0.774);
+    background-color:  #cab58b;
+    border: none;
+    margin-bottom: 3vh;
+    height: 5vh;
+    width: 6vw;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    font-weight: 650;
+}
+.recomendation{
+    background-color: rgb(175, 127, 87);
+    height: 80vh;
+    width: 30%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card{
+    background-color:  #e7cfa049;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.img{
+    height: 10vh;
+}
+.button{
+    height: 5vh;
+    width: 8vw;
+    border: none;
+    background-color: rgb(175, 127, 87);
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.buttonContainer{
+    display: flex;
+    align-items: center;
+}
+.recom{
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.623);
+}
+.purchase{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}

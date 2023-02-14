@@ -9,6 +9,7 @@ import cartReducers from "./Cart/reducers";
 import adminReducerAll from "./admin/reducers";
 
 const {adminReducers} = adminReducerAll
+import userReducers from "./User/reducers";
 
 const store = configureStore({
         reducer: {
@@ -20,7 +21,7 @@ const store = configureStore({
         product: productReducers,
         cart: cartReducers,
         admin: adminReducers,
-
+        user: userReducers,
     }
 })
 
