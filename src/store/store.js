@@ -7,9 +7,8 @@ import filterReducers from "./FilterGender/reducers";
 import productReducers from "./Product/reducers";
 import cartReducers from "./Cart/reducers";
 import adminReducerAll from "./admin/reducers";
-
-const {adminReducers} = adminReducerAll
 import userReducers from "./User/reducers";
+const {adminReducers} = adminReducerAll
 
 const store = configureStore({
         reducer: {
