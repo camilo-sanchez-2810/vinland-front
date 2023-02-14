@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
 import style from './product.module.css'
 import Genre_button from './Genre_button'
 import { useSelector, useDispatch } from 'react-redux'
@@ -6,10 +7,19 @@ import genreActions from '../../store/Genre/actions'
 const {get_genres} = genreActions
 
 export default function Product_genre() {
-  const genres = useSelector((store) => store.genres.genre)
-  const dispatch = useDispatch()
+  const [genres, setGenres] = useState([])
+
+  const getData = async() => {
+    try{
+      const response = await axios.get("http://localhost:8080/api/genre")
+      setGenres(response.data.response)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
   useEffect(() =>{
-    dispatch(get_genres())
+    getData()
   }, [])
 
   return (
@@ -17,9 +27,9 @@ export default function Product_genre() {
       {genres?.map((genre, index) =>{
         return (
           <Genre_button
-          index={index}
-          key={index}
+          key={genre?._id}
           name={genre.name}  
+          id={genre._id}
           />
         )
       })}
