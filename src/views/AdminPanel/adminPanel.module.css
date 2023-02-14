@@ -6,13 +6,27 @@
 .mainPanel{
     background-color: #E7CFA0;
     width: 100%;
+    /* 
+ */
 }
-
+.bgmain{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../public/assets/images/bjvik.jpg");
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 .navBar{
+    width: 100%;
     height: 15vh;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(31, 41, 42, 0.624);
 }
 
 .button2{
@@ -20,12 +34,17 @@
     height: 13vh;
     gap: 10px;
 
+
 }
 .buttones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border-radius: 20px;
     width: 6rem;
     margin: 15px;
-    font-size: 18px;
+    font-size: 20px;
     background-color: #E7CFA0;
     color: white;
 }
@@ -67,6 +86,7 @@
 .h1Admin{
     font-size: 50px;
     margin-top: 100px;
+    color: white;
 }
 
 .h2Admin{
@@ -75,51 +95,20 @@
     text-decoration: 8px underline;
 }
 
-/* .mainAdmin{
-    width: 100%;
-    
-}
-.bgmain{
-    background-image: url("../../../public/assets/images/adbg.jpeg");
-    background-position: center;
-    height: 90vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.containH1P{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    height: 500vh;
-}
-
-
-
-.padmin{
-    font-size: 20px;
-    text-align: center;
-}
-
-
-
-
-
 .tableContain{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+}
+.switchcont{
+    width: 8rem;
 }
 
 .table1{
+    text-align: center;
     border: 1px solid #EEEEF2;
     background-color: #F9F9FC;
     width: 100%;
@@ -135,7 +124,7 @@ td {
     color: #484964;
 	padding: 3px;
 	width: 30px;
-	height: 25px;
+	height: 50px;
 }
 th {
 	background: #F9F9FC;
@@ -188,43 +177,54 @@ justify-content: center;
 width: 600px;
 }
 .iconitoC{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 40px;
     margin: 0 6px ;
 }
-.iconitoA{
-    width: 10px;
-    height: 13px;
-    margin: 0 6px ;
+.iconitoC:hover{
+    
+    filter: invert(100%);
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    
+ 
 }
-.photoAutor{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.tacho{
+    background-color: #d43939;
+    background-size: 5% 5%;
 }
-.tdLeft{
-    width: 10vw;
-    text-align: left;
+.tacho:hover{
+    filter: saturate(130%);
+}
+.email{
+    font-size: 20px;
 }
 
-.cm-toggle {
+
+/* .tdLeft{
+    width: 10vw;
+    text-align: left;
+} */
+
+.cmtoggle {
 	appearance: none;
 	-webkit-tap-highlight-color: transparent;
 	position: relative;
 	border: 0;
 	outline: 0;
+    top:-20px;
+    right: 40px;
 	cursor: pointer;
     margin: 0px;
     text-align: center;
 	
 }
 
-.cm-toggle:after {
+.cmtoggle:after {
 	content: '';
-	width: 50px;
-	height: 23px;
+	width: 72px;
+	height: 30px;
 	display: inline-block;
-	background: rgba(113, 112, 112, 0.772);
+	background:  #E7CFA0;
 	border-radius: 18px;
 	clear: both;
     position: absolute;
@@ -232,14 +232,14 @@ width: 600px;
     top: -8%
 }
 
-.cm-toggle:before {
+.cmtoggle:before {
 	content: '';
-	width: 18px;
-	height: 18px;
+	width: 23px;
+	height: 23px;
 	display: block;
 	position: absolute;
-	left: 0;
-    top: 5%;
+	left: 50px;
+    top: 3px;
 	border-radius: 50%;
 	background: rgb(255, 255, 255);
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -247,14 +247,53 @@ width: 600px;
 }
 
 
-.cm-toggle:checked:before {
+.cmtoggle:checked:before {
 
 	left: 40%;
 	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-.cm-toggle:checked:after {
-	background: #4338CA;
+.cmtoggle:checked:after {
+	background:#d43939;
 }
+/* .mainAdmin{
+    width: 100%;
+    
+}
+.bgmain{
+    background-image: url("../../../public/assets/images/adbg.jpeg");
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.containH1P{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 500vh;
+}
+
+
+
+.padmin{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.
+
 
 
 @media (max-width: 765px){

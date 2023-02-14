@@ -7,9 +7,8 @@ import authActions from '../../store/Login/actions'
 const { cerrar_sesion,iniciar_sesion } = authActions
 
 export default function Navbar() {
-  let { token,is_online } = useSelector(store => store.auth)
+  let { token,is_online,is_admin } = useSelector(store => store.auth)
   const myMail = useSelector((store) => store.auth.email)
-  console.log(myMail)
   
 
   let dispatch = useDispatch()
@@ -27,13 +26,20 @@ export default function Navbar() {
         <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>
         <Anchor to={"/shopping"} className={style.anchor}>Tienda</Anchor>
         <Anchor className={style.anchor}>Mi Perfil</Anchor>
-        {is_online ? (
+      
+        {is_online && is_admin ? (
             <>
                 <p className={style.anchor}>{myMail}</p>
                 <span className={style.anchor} onClick={signout}>Cerrar Sesion</span>
-                
+                <Anchor className={style.anchor} to={"/admin"}>Panel Admin</Anchor>
                 </>
-            ) : ( <>
+            ) : is_online  ? (
+              <>
+              <p className={style.anchor}>{myMail}</p>
+              <span className={style.anchor} onClick={signout}>Cerrar Sesion</span>
+              
+              </>
+            ) :( <>
                 <Anchor className={style.anchor} to={"/signin"}>Iniciar Sesion</Anchor>
                 <Anchor className={style.anchor} to={"/signup"}>Registrarse</Anchor>
             </>

@@ -10,10 +10,12 @@ const getUsers = createAsyncThunk(
       `http://localhost:8080/api/users`,
       headers
     );
+    console.log(response)
     return {
         succes: true,
-        response: { data: response.data },
+        response: { data: response.data.response.all },
     };
+
   } catch (error) {
     return {
       success: false,
