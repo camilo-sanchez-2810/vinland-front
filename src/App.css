@@ -4,5 +4,5 @@
   box-sizing: border-box;
 }
 .carousel.carousel-slider .control-arrow:hover{
-  background: none;
+  background: none !important;
 }
