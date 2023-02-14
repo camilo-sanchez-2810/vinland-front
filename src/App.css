@@ -3,6 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-.carousel.carousel-slider .carousel-arrow:hover {
+.carousel.carousel-slider .control-arrow:hover{
   background: none;
 }

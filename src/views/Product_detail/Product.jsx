@@ -24,13 +24,6 @@ export default function Product() {
         data()
     },[])
     console.log(product);
-/*     const product = useSelector(store => store.product)
-    const dispatch = useDispatch()
-    console.log(product);
-
-    useEffect(() => {
-        dispatch(get_one(id))
-    },[]) */
 
   return (
     <>
