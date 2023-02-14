@@ -26,8 +26,9 @@ height: 9vh;
     margin: 0 15px 0 15px; 
     text-decoration: none;
     color: #7D5034;
+    cursor: pointer;
+    transition: color ease .3s;
 }
 .anchor:hover{
-    transition: 0.2s ;
-    font-size: 18px;
+    color: #d68c5d;
 }
