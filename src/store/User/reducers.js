@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import userActions from "./actions";
 
-const {get_one} = userActions
+const {get_one, update_one} = userActions
 const initialState = {
     user: []
 }
@@ -11,9 +11,14 @@ const userReducers = createReducer(
         builder
             .addCase(get_one.fulfilled, (state, action) => {
                 const newState = {
-                    user: action.payload.response[0]
+                    user: action.payload.response
                 }
                 return newState
+            })
+            .addCase(update_one.fulfilled, (state, action) => {
+                const newState = {
+                    user: action.payload.response
+                }
             })
     }
 )

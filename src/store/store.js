@@ -8,6 +8,7 @@ import productReducers from "./Product/reducers";
 import cartReducers from "./Cart/reducers";
 import adminReducerAll from "./admin/reducers";
 import userReducers from "./User/reducers";
+import buyerReducer from "./Buyer/reducers";
 const {adminReducers} = adminReducerAll
 
 const store = configureStore({
@@ -21,6 +22,7 @@ const store = configureStore({
         cart: cartReducers,
         admin: adminReducers,
         user: userReducers,
+        buyer: buyerReducer
     }
 })
 

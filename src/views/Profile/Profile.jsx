@@ -45,7 +45,7 @@ export default function Profile() {
                     <h2 className={style.text}>{user.email}</h2>
                 </div>
                 <div className={style.btnContainer}>
-                    <button className={style.btn}>Editar Perfil</button>
+                    <Anchor to={"/edit-profile"} className={style.btn}>Editar Perfil</Anchor>
                 </div>
             </div>
             <div className={style.purchase}>
