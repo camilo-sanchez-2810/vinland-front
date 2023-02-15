@@ -30,7 +30,7 @@ export default function Product() {
     <div className={style.container}>
         <div>
             <div className={style.vinylbg}>
-                <Anchor className={style.back} to={'/shopping'}><img src='/assets/images/arrowSolid.png'/></Anchor>
+                <Anchor className={style.back} to={'/shopping'}><img src='/assets/images/arrow-black.png' className={style.anchorImg}/></Anchor>
             </div>
             <div className={style.cardContainer}>
                 <div className={style.card}>

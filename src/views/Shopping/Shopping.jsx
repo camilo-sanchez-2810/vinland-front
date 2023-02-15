@@ -65,17 +65,19 @@ export default function Shopping() {
 
     return (
     <div className={style.container}>
-        <div className={style.titleContainer}>
+        <header className={style.header}>
+          <div className={style.titleContainer}>
             <h1 className={style.title}>Nuestros Vinilos</h1>
-        </div>
-        <div className={style.inputContainer}>
-            <input type="text" className={style.searcher} placeholder='Ingresa el producto' ref={inputText} onKeyUp={() => setLoad(!load)}/>
-        </div>
+          </div>
+          <div className={style.inputContainer}>
+              <input type="text" className={style.searcher} placeholder='Ingresa el producto' ref={inputText} onKeyUp={() => setLoad(!load)}/>
+          </div>
+        </header>
         <div>
-            <Product_genre/>
         </div>
         <div className={style.shopContainer}>
             <div className={style.sndContainer}>
+            <Product_genre/>
                     {allProducts.length === 0 
                     ? 
                     <div className={style.sorryContainer}>

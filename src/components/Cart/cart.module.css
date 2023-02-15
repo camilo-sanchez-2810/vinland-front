@@ -8,7 +8,7 @@
   z-index: 1000;
   background-color: #22222299;
   transition: background ease .5s;
-  color: #fff;
+  color: #c9c9c9;
 }
 .showContainer {
   display: block;
@@ -16,7 +16,7 @@
 .cart {
   float: right;
   width: 50%;
-  background-color: #E7CFA0;
+  background-color: #3e3e4a;
   height: 100%;
 }
 .showCart {
@@ -36,7 +36,7 @@
 .closeCart {
   border: none;
   background: none;
-  color: #fff;
+  color: #c9c9c9;
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 600;
