@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import productActions from '../../store/Product/actions'
 import axios from 'axios'
 import { Link as Anchor } from 'react-router-dom'
+/* import YouTube from "react-youtube" */
 const {get_one} = productActions
 
 export default function Product() {
@@ -25,6 +26,16 @@ export default function Product() {
     },[])
     console.log(product);
 
+/*     const opts = {
+        height: '50',
+        width: '300',
+        borderRadius: 20,
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      }; */
+
   return (
     <>
     <div className={style.container}>
@@ -37,7 +48,8 @@ export default function Product() {
                     <div className={style.imgContainer}>
                         <img className={style.img} src={product.photo} alt="" />
                         <h3>{product.name}</h3>
-                        <audio preload="true" controls src='/assets/audio/nunca_quise.mp3' className={style.audio}/>
+                        {/* <audio preload="true" controls src='/assets/audio/nunca_quise.mp3' className={style.audio}/> */}
+                        {/* <YouTube className={style.youtube} videoId={'GL56LY6fE0E'} opts={opts}/> */}
                     </div>
                     <div className={style.textContainer}>
                         <p className={style.text}>{product.description}</p>

@@ -8,7 +8,6 @@ export default function Genre_button(props) {
   const { id, name } = props;
   const [click, setClick] = useState(true);
   const dispatch = useDispatch();
-  const genres = useSelector(store => store.filter.filerGender)
 
   const getId = () => {
   setClick(!click)

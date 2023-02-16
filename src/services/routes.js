@@ -7,6 +7,8 @@ import SignUp from '../views/login/SignUp.jsx';
 import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
+import Edit from "../views/Edit_profile/Edit";
+import Verify from "../views/Verify/Verify";
 import AdminPanelP from "../views/AdminPanel/adminPanel.Products";
 import AdminPanelC from "../views/AdminPanel/AdminPanel.Compras";
 
@@ -47,11 +49,18 @@ export const indexRouter = createBrowserRouter([
         element: <AdminPanel />,
     },
     {
+        path:"/edit-profile",
+        element: <Edit/>
+    },
+    {
+        path:"/verify/:id",
+        element:<Verify/>
+    },
         path:"/admin-productos",
         element: <AdminPanelP/>
-        },
-        {
-            path:"/admin-compras",
-            element: <AdminPanelC/>
-            },
+     },
+     {
+         path:"/admin-compras",
+         element: <AdminPanelC/>
+      },
 ])
