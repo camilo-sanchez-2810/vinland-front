@@ -8,6 +8,7 @@ import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
 import Edit from "../views/Edit_profile/Edit";
+import Verify from "../views/Verify/Verify";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -48,5 +49,10 @@ export const indexRouter = createBrowserRouter([
     {
         path:"/edit-profile",
         element: <Edit/>
+    },
+    {
+        path:"/verify",
+        element:<Verify/>
     }
+
 ])
