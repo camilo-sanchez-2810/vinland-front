@@ -32,11 +32,134 @@
 .button2{
     display: flex;
     height: 13vh;
-    gap: 10px;
-
+    padding: 2px;
 
 }
-.buttones{
+.buttones1{
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ top: 2px;
+ right: 230px;
+ height: 50px;
+ width: 7rem;
+ margin: 15px;
+ font-size: 20px;
+ background-color: #10be72;
+ color: white;
+ border-radius: 20px 0 0 20px;
+ border: 1px solid black;
+
+}
+.buttonesuser{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 230px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color: #E7CFA0;
+    color: white;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid black;
+}
+
+
+.buttonespro{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 120px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:   #10be72;
+    color: white;
+    border: 1px solid black;
+}
+
+
+.buttones2{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 120px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:  #E7CFA0;
+    color: white;
+    border: 1px solid black;
+
+   }
+   .buttonesu{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 230px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color: #E7CFA0;
+    color: white;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid black;
+   }
+   .buttones3{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:  #E7CFA0;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid black;
+    
+   }
+.buttoneCom{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color: #10be72;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid black;
+}
+.buttones {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +170,7 @@
     font-size: 20px;
     background-color: #E7CFA0;
     color: white;
+    border: 1px solid black;
 }
 
 .containH1P{
@@ -141,25 +265,6 @@ th {
     border-radius: 50%;
 }
 
-.butonCompany {
-    border: 1px solid #EEEEF2;
-    border-bottom: 1px solid #4338CA;
-    font-weight: bold;
-    font-size: 20px;
-    width: 300px;
-    height: 50px;
-    border-radius: 15px 0 0 0;
-
-}
-.butonAuthor{ 
-    border: 1px solid #EEEEF2;
-    border-bottom: 1px solid #4338CA;
-    font-size: 20px;
-    font-weight: bold;
-    width: 300px;
-    height: 50px;
-    border-radius: 0 15px 0 0;
-}
 
 .trr{
 text-align: center;
