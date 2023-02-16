@@ -41,12 +41,13 @@ export default function Editform() {
     }
     dispatch(update_one({token, data: data1}))
     dispatch(update_buyer({token, data: data2}))
+
   }
 
   return (
     <div className={style.formContainer}>
       <div className={style.back}>
-            <Anchor to={"/profile"}>Volver a perfil</Anchor>
+            <Anchor to={"/profile"} className={style.anchorBack}> <img src="/assets/images/arrowSolid.png" className={style.img} alt="" /> </Anchor>
       </div>
       <form onSubmit={sendData} className={style.form}>
         <h1>Editar mi perfil</h1>
@@ -56,7 +57,7 @@ export default function Editform() {
         <input type="text" placeholder={buyer.address} ref={inputAdd} className={style.input}/>
         <input type="text" placeholder={buyer.city} ref={inputCity} className={style.input}/>
         <input type="text" placeholder={buyer.country} ref={inputCountry} className={style.input}/>
-        <input type="submit" value='Enviar' />
+        <input type="submit" value='Enviar' className={style.submit} />
       </form>
 </div>
   )
