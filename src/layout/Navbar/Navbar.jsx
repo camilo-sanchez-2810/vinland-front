@@ -24,7 +24,7 @@ export default function Navbar({handleShow, show}) {
   return (
     <div  className={style.container}>
         <div>
-          <img src="/assets/images/logo.png" alt="logo" className={style.logo}/>
+          <img src="/assets/images/logo-black.png" alt="logo" className={style.logo}/>
         </div>
         <div className={style.anchorContainer}>
         <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>

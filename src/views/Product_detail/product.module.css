@@ -4,33 +4,43 @@
     flex-direction: column;
 }
 .vinylbg{
-    background-image: url(../../../public/assets/images/bgi.jpg);
+    background-image: url(../../../public/assets/images/bgDetail.jpg);
     background-size: cover;
-    background-position: center;
-    height: 50vh;
+    background-position: start;
+    height: 65vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1;
 }
 .brown{
-    background-color: hsl(39, 36%, 67%);
+    background-color: #cebfe093;
     width: 100%;
     height: 50vh;
     z-index: 1;
 }
-.back{
-    margin-top: 1rem;
+.back{ 
+    margin-left: 2vw;
+    margin-bottom: 15vh;
     color: white;
     text-decoration: none;
-    width: 5%;
+    width: 4vw;
+    height: 8vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 50%;
 }
+.back:hover{
+    transition: 0.3s ease;
+}
+
+.anchorImg{
+    object-fit: contain;
+}
 .card{
-    background-color: #E7CFA0;
+    background-color: #e6ddcc;
     height: 75vh;
     width: 60%;
     z-index: 20;
@@ -58,7 +68,7 @@
     height: 100%;
 }
 audio::-webkit-media-controls-panel {
-    background-color: #E7CFA0;
+    background-color: #e6ddcc;
     
   }
 audio{
@@ -91,11 +101,17 @@ audio{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7D5034;
+    background-color:rgba(255, 255, 255, 0.788);
     text-decoration: none;
-    color: white;
+    color: black;
     height: 5vh;
     width: 10vw;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cart:hover{
+    background-color: #cebfe093;
 }

@@ -18,7 +18,7 @@ export default function Profile() {
     const data = async() =>{
         let headers = {headers: {'Authorization':`Bearer ${token}`}}
         try{
-            const response = await axios.get("http://localhost:8000/api/buyer", headers)
+            const response = await axios.get("http://localhost:8080/api/buyer", headers)
             setBuyer(response.data.response)
         }
         catch(error){
@@ -34,6 +34,10 @@ export default function Profile() {
     },[])
   return (
     <div className={style.container}>
+        <header className={style.header}>
+            <h1 className={style.title}>Mi Perfil</h1>
+        </header>
+        <div className={style.allContent}>
         <div className={style.infoContainer}>
             <div className={style.imgBg}>
                 <div className={style.mailContainer}>
@@ -58,9 +62,12 @@ export default function Profile() {
                     <img src={product.photo} alt="" className={style.img}/>
                     <h3>{product.name.slice(0, 12)}...</h3>
                     <div className={style.buttonContainer}>
-                        <button className={style.button}>Añadir a carrito</button>
+                    <button className={style.button}>
+								<img src='/assets/images/cart2.png' alt='' />
+					</button>
                     </div>
                 </div>)}
+        </div>
         </div>
     </div>
   )
