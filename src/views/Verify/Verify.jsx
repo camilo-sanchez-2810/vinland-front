@@ -15,10 +15,8 @@ export default function Verify() {
   })
   return (
     <div className={style.container}>
-      <div>
         <h1>Tu cuenta esta verificada, ya puedes navegar con libertad</h1>
         <Anchor className={style.anchor} to={"/"}>Volver al inicio</Anchor>
-      </div>
     </div>
   )
 }
