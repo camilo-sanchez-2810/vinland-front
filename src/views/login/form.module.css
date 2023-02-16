@@ -23,7 +23,7 @@ align-items: center;
 flex-direction: column;
 }
 .form{
-    background-image:  url('../../../public/assets/images/n.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../../../public/assets/images/n.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,8 +44,9 @@ flex-direction: column;
 }
 
 .form1{
-    background-image:  url('../../../public/assets/images/pngegg.png');
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../../../public/assets/images/pngegg.png');
     background-size: contain;
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(31, 41, 42, 0.624);
@@ -107,7 +108,7 @@ flex-direction: column;
     height: 6vh;
     border-radius: 50px;
     color: rgb(0, 0, 0);
-    border: 2px solid black;
+    border: none;
     font-size: 18px;
     
  
@@ -141,7 +142,7 @@ flex-direction: column;
     background-color: #dfefe6;
     border-radius: 20px;
     color: rgb(0, 0, 0);
-    border: 2px solid rgba(0, 0, 0, 0.502);
+    border: none;
 
 }
 .button1{
@@ -155,7 +156,7 @@ flex-direction: column;
     background-color: #dfefe6;
     border-radius: 20px 20px 20px 20px;
     color: rgb(0, 0, 0);
-    border: 2px solid rgba(0, 0, 0, 0.502);
+    border: none;
     margin:10px 0;
 }
 
