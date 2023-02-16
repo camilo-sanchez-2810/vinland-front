@@ -8,35 +8,31 @@ import { Link as Anchor } from 'react-router-dom'
 import productsActions from "../../store/Products/actions";
 
 const {getUsers} = adminActions
-const { get_all_products} = productsActions
+const {getProducts} = productsActions
 
 export default function AdminPanelP() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
   const [ change, setChange ] = useState(false);
-  
+  const [ page, setPages] = useState(1);
+
 
   useEffect(() => {
     dispatch(getUsers(token));
+    dispatch(getProducts());
   }, [change]);
-  
-  const adminUser = useSelector((state) => state.admin.users);
-  console.log(adminUser)
-  const allProducts = useSelector((store) => store?.products?.products);
+
+  const allProducts = useSelector((store) => store?.products);
   console.log(allProducts)
 
-  const lockUser = async (e) => {
-    try {
-      const data = {}
-      const headers = { headers: { Authorization: `Bearer ${token}` } };
-      await axios.put(`http://localhost:8080/api/admin/${e.target.value}`, data, headers,);
-      
-      setChange(!change)
-     
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const next = () => {
+    setPages(page +1)
+  }
+const prev = () => {
+  setPages(page -1)
+}
+
+
   const deleted = () => {
     Swal.fire({
       position: "center",
@@ -58,8 +54,7 @@ export default function AdminPanelP() {
     }).then((resultado) => {
       if (resultado.value) {
         // Hicieron click en "Sí"
-        deleteUser(userId);
-        console.log(userId)
+        deleteProduct(userId);
         deleted();
       } else {
         // Dijeron que no
@@ -68,10 +63,10 @@ export default function AdminPanelP() {
     });
   };
 
-  const deleteUser = async (id) => {
+  const deleteProduct = async (id) => {
     try {
       const headers = { headers: { Authorization: `Bearer ${token}` } };
-      await axios.delete(`http://localhost:8080/api/admin/${id}`, headers);
+      await axios.delete(`http://localhost:8080/api/product/${id}`, headers);
       console.log(id)
       setChange(!change)
     } catch (error) {
