@@ -9,6 +9,8 @@ import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
 import Edit from "../views/Edit_profile/Edit";
 import Verify from "../views/Verify/Verify";
+import AdminPanelP from "../views/AdminPanel/adminPanel.Products";
+import AdminPanelC from "../views/AdminPanel/AdminPanel.Compras";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -44,7 +46,7 @@ export const indexRouter = createBrowserRouter([
     },
     {
         path :"/admin",
-        element: <AdminPanel />
+        element: <AdminPanel />,
     },
     {
         path:"/edit-profile",
@@ -53,6 +55,12 @@ export const indexRouter = createBrowserRouter([
     {
         path:"/verify/:id",
         element:<Verify/>
-    }
-
+    },
+        path:"/admin-productos",
+        element: <AdminPanelP/>
+     },
+     {
+         path:"/admin-compras",
+         element: <AdminPanelC/>
+      },
 ])
