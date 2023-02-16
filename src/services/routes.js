@@ -51,7 +51,7 @@ export const indexRouter = createBrowserRouter([
         element: <Edit/>
     },
     {
-        path:"/verify",
+        path:"/verify/:id",
         element:<Verify/>
     }
 

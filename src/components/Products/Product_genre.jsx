@@ -2,9 +2,6 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import style from './product.module.css'
 import Genre_button from './Genre_button'
-import { useSelector, useDispatch } from 'react-redux'
-import genreActions from '../../store/Genre/actions'
-const {get_genres} = genreActions
 
 export default function Product_genre() {
   const [genres, setGenres] = useState([])

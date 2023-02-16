@@ -19,6 +19,7 @@ const userReducers = createReducer(
                 const newState = {
                     user: action.payload.response
                 }
+                return newState
             })
     }
 )
