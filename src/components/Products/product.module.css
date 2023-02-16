@@ -1,23 +1,25 @@
 .container{
-    width: 100%;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    margin-bottom: 2vh;
 }
 .btnContainer{
     margin: 1rem;
 }
 .btn{
+    background-color: rgba(255, 255, 255, 0.664);
     border: none;
     height: 5vh;
     width: 8vw;
-    border-radius: 1rem;
     cursor: pointer;
-    background-color: #7d503470;
-    color: white;
-}
-.btn:hover{
-    background-color: #64402a70;
-    transition: 0.5s ease-in-out;
+    color: #312222;
+    font-size: 120%;
+    font-weight: 650;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
 }
 .btnClicked{
     border: none;
@@ -25,6 +27,9 @@
     width: 8vw;
     border-radius: 1rem;
     cursor: pointer;
-    background-color: #4e3221a6;
+    background-color: rgba(0, 0, 0, 0.877);
     color: white;
+    font-size: 120%;
+    font-weight: 650;
+    transition: 0.3s ease-in-out;
 }

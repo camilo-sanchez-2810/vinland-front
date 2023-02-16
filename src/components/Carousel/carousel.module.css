@@ -1,12 +1,12 @@
 .carouselContainer{
-    background-color: #ceb88e;
+    background-color: rgba(255, 255, 255, 0.363);
     padding-top: 4vh;
-    width: 80%;
+    width: 90%;
     height: 60vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15vh 0 15vh 0;
+    margin: 5vh 0 15vh 0;
     border-radius: 1rem;
 }
 .img{

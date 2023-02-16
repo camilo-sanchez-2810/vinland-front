@@ -7,6 +7,8 @@ import SignUp from '../views/login/SignUp.jsx';
 import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
+import AdminPanelP from "../views/AdminPanel/adminPanel.Products";
+import AdminPanelC from "../views/AdminPanel/AdminPanel.Compras";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -42,6 +44,14 @@ export const indexRouter = createBrowserRouter([
     },
     {
         path :"/admin",
-        element: <AdminPanel />
+        element: <AdminPanel />,
     },
+    {
+        path:"/admin-productos",
+        element: <AdminPanelP/>
+        },
+        {
+            path:"/admin-compras",
+            element: <AdminPanelC/>
+            },
 ])

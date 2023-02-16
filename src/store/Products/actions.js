@@ -19,6 +19,21 @@ console.log(error.response.data);
     }
 )
 
-const productsActions = {get_all_products}
+const getProducts = createAsyncThunk(
+    'get_all_products',
+    async() => {
+       try{
+        let response = await axios.get(`http://localhost:8080/api/product`)
+        return {
+            success: true,
+            response: response.data.response,
+        }
+       }catch(error){
+console.log(error.response.data);
+       }
+    }
+)
+
+const productsActions = {get_all_products, getProducts}
 
 export default productsActions

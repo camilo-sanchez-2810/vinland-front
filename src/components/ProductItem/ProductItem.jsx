@@ -20,17 +20,18 @@ const ProductItem = ({id, photo, name, price}) => {
 						src={photo}
 						alt={name}
 					/>
+
 				</Anchor>
 			</div>
 			<div className={style.legend}>
-				<h2 className={style.productName}>{name}</h2>
-			</div>
-			<div className={style.containerCart}>
-				<h2 className={style.productPrice}>{price}$</h2>
-				<button className={style.carrito} onClick={e => handleAdd(id)}>
-					<img src='/assets/images/cart2.png' alt='' />
-				</button>
-			</div>
+						<h2 className={style.productName}>{name}</h2>
+					</div>
+					<div className={style.containerCart}>
+						<h2 className={style.productPrice}>{price}$</h2>
+							<button className={style.carrito} onClick={e => handleAdd(id)}>
+								<img src='/assets/images/cart2.png' alt='' />
+							</button>
+					</div>
 		</div>
 	);
 };

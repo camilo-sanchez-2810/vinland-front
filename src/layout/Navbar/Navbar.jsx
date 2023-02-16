@@ -12,6 +12,7 @@ const { cerrar_sesion,iniciar_sesion } = authActions
 
 export default function Navbar({handleShow, show}) {
   let { token,is_online,is_admin } = useSelector(store => store.auth)
+  
   const myMail = useSelector((store) => store.auth.email)
   
 
@@ -24,7 +25,7 @@ export default function Navbar({handleShow, show}) {
   return (
     <div  className={style.container}>
         <div>
-          <img src="/assets/images/logo.png" alt="logo" className={style.logo}/>
+          <img src="/assets/images/logo-black.png" alt="logo" className={style.logo}/>
         </div>
         <div className={style.anchorContainer}>
         <Anchor to={"/"} className={style.anchor}>Inicio</Anchor>

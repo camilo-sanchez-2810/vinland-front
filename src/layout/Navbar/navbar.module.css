@@ -1,8 +1,10 @@
 .container{
-    margin: 10px;
-    height: 10vh;
+    padding: 10px 10px 30px 10px;
+    height: 20vh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    position: absolute;
     z-index: 30;
 }
 .logo{
@@ -20,15 +22,17 @@ height: 9vh;
     background: none;
     border: none;
     cursor: pointer;
-    color: #7D5034;
+    color: #4E3737;
 }
 .anchor{
     margin: 0 15px 0 15px; 
     text-decoration: none;
-    color: #7D5034;
+    color:#4E3737;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 650;
     transition: color ease .3s;
 }
 .anchor:hover{
-    color: #d68c5d;
+    color: #492626;
 }

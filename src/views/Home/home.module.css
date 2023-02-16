@@ -1,5 +1,5 @@
 .container{
-    background-color: #E7CFA0;
+    background-color: #e6ddcc;
     min-height: 69vh;
 }
 .logo{
@@ -32,4 +32,12 @@
 .carouselContainer{
     display: flex;
     justify-content: center;
+}
+.recom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 3vh;
+    height: 10vh;
 }
