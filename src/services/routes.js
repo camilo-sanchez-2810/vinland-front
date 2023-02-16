@@ -56,6 +56,7 @@ export const indexRouter = createBrowserRouter([
         path:"/verify/:id",
         element:<Verify/>
     },
+    {
         path:"/admin-productos",
         element: <AdminPanelP/>
      },
