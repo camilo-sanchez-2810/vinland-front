@@ -10,7 +10,7 @@ import productsActions from "../../store/Products/actions";
 const {getUsers} = adminActions
 const { get_all_products} = productsActions
 
-export default function AdminPanel() {
+export default function AdminPanelC() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
   const [ change, setChange ] = useState(false);
@@ -49,12 +49,12 @@ export default function AdminPanel() {
 
   const handleClick = (userId) => {
     Swal.fire({
-      title: "Eliminar Usuario",
-      text: "Estas seguro?",
+      title: "Delete",
+      text: "Are you sure?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonText: "Aceptar",
-      cancelButtonText: "Cancelar",
+      confirmButtonText: "Ok",
+      cancelButtonText: "Cancel",
     }).then((resultado) => {
       if (resultado.value) {
         // Hicieron click en "Sí"
@@ -63,7 +63,7 @@ export default function AdminPanel() {
         deleted();
       } else {
         // Dijeron que no
-        console.log("*Usuario no Eliminado*");
+        console.log("*Comics not delete*");
       }
     });
   };
@@ -88,9 +88,9 @@ export default function AdminPanel() {
           <Anchor to={"/"} className={styles.buttones}>Inicio</Anchor>
         </div>
         <div className={styles.button2}>
-          <Anchor className={styles.buttones1} >Usuarios</Anchor>
+        <Anchor className={styles.buttonesuser} to={"/admin"}>Usuarios</Anchor>
           <Anchor className={styles.buttones2} to={"/admin-productos"}>Productos</Anchor>
-          <Anchor className={styles.buttones3} to={"/admin-compras"}>Compras</Anchor>
+          <Anchor className={styles.buttoneCom}>Compras</Anchor>
         </div>
       </div>
           <h1 className={styles.h1Admin}>Panel de administrador</h1>
@@ -101,38 +101,10 @@ export default function AdminPanel() {
 
       <div className={styles.container2}>
         <div className={styles.h2contain}>
-          <h3 className={styles.h2Admin}>Usuarios</h3>
+          <h3 className={styles.h2Admin}>Compras</h3>
         </div>
         <div className={styles.tableContain}>
-            <table className={styles.table1}>
-             {adminUser?.map((card, index) => {
-                    return (
-                      <tr className={styles.trr} key={index}>
-                        <td className={styles.email}>
-                          {card.first_name}
-                        </td>
-                        <td className={styles.email}>
-                          {card.last_name}
-                        </td>
-                        <td className={styles.email}>
-                          {card.email}
-                        </td>
-                        <td className={styles.switchcont}>
-                        <label className={styles.switch}>
-                            <input className={styles.cmtoggle} name="checkbox" onChange={lockUser}  checked={card.is_lock} value={card._id} type="checkbox" id="" />
-                          </label>
-                        </td>
-                        <td  className={styles.tacho}>
-                        <img  onClick={ () => handleClick(card._id)}
-                            className={styles.iconitoC}
-                            src="assets/images/tacho.png"
-                            alt=""
-                          />
-                        </td>
-                      </tr>
-                    );
-                  })}
-            </table>
+           
         </div>
       </div>
     </main>
