@@ -1,0 +1,15 @@
+.container{
+    background-color: #7c7c80c5;
+    min-height: 100vh;
+}
+.content{
+    display: flex;
+    height: 100vh;
+}
+.img{
+    width: 100%;
+    object-fit: cover;
+}
+.back{
+    width: 10%;
+}

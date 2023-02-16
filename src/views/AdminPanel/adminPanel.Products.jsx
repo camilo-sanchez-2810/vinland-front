@@ -19,7 +19,7 @@ export default function AdminPanelP() {
 
   useEffect(() => {
     dispatch(getUsers(token));
-    dispatch(getProducts());
+    dispatch(getProducts(page));
   }, [change]);
 
   const allProducts = useSelector((store) => store?.products);
