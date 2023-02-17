@@ -47,7 +47,6 @@ export default function Shopping() {
     }
     const boton = () => {
     
-        let productLimit = allProducts.length
 
         if (pages === 2) {
           return (

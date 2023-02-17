@@ -8,7 +8,6 @@ import { Link as Anchor } from 'react-router-dom'
 import productsActions from "../../store/Products/actions";
 
 const {getUsers} = adminActions
-const { get_all_products} = productsActions
 
 export default function AdminPanel() {
   const dispatch = useDispatch();
@@ -133,6 +132,7 @@ export default function AdminPanel() {
                     );
                   })}
             </table>
+            
         </div>
       </div>
     </main>
