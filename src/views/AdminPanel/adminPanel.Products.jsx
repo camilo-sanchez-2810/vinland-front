@@ -102,6 +102,7 @@ export default function AdminPanelP() {
       <div className={styles.container2}>
         <div className={styles.h2contain}>
           <h3 className={styles.h2Admin}>Productos</h3>
+          <Anchor className={styles.buttonCreate} to={"/create-product"}>Crear Producto</Anchor>
         </div>
         <div className={styles.tableContain}>
             
