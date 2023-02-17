@@ -11,6 +11,7 @@ import Edit from "../views/Edit_profile/Edit";
 import Verify from "../views/Verify/Verify";
 import AdminPanelP from "../views/AdminPanel/adminPanel.Products";
 import AdminPanelC from "../views/AdminPanel/AdminPanel.Compras";
+import Create from "../views/CreateProduct/Create";
 
 export const indexRouter = createBrowserRouter([
     {
@@ -59,9 +60,13 @@ export const indexRouter = createBrowserRouter([
     {
         path:"/admin-productos",
         element: <AdminPanelP/>
-     },
-     {
-         path:"/admin-compras",
-         element: <AdminPanelC/>
-      },
+    },
+    {
+        path:"/admin-compras",
+        element: <AdminPanelC/>
+    },
+    {
+        path:"/create-product",
+        element: <Create/>
+    }
 ])

@@ -9,9 +9,9 @@ import adminReducerAll from "./admin/reducers";
 import userReducers from "./User/reducers";
 import productsReducersAll from "./Products/reducers";
 import buyerReducer from "./Buyer/reducers";
+import alertReducer from "./Alert/reducers";
 
 const { productsReducers , getproductsReducer } = productsReducersAll  
-
 
 const {adminReducers} = adminReducerAll
 
@@ -27,6 +27,8 @@ const store = configureStore({
         cart: cartReducers,
         admin: adminReducers,
         user: userReducers,
+        buyer: buyerReducer,
+        alert: alertReducer
         allProduct: getproductsReducer,
         buyer: buyerReducer
     }
