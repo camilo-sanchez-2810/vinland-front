@@ -1,14 +1,14 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const addProduct = createAction('add-product', ({idProduct, stock}) => {
+const addProduct = createAction('add-product', ({idProduct, productStock, productName, productPrice, productPhoto}) => {
   return {
-    payload: {idProduct, stock}
+    payload: {idProduct, productStock, productName, productPrice, productPhoto}
   }
 })
 
-const increaseQuantity = createAction('increase-quantity', ({idProduct, stock}) => {
+const increaseQuantity = createAction('increase-quantity', ({idProduct, productStock}) => {
   return {
-    payload: {idProduct, stock}
+    payload: {idProduct, productStock}
   }
 })
 

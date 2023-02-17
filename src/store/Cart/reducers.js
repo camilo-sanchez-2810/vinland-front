@@ -9,11 +9,12 @@ const initialState = {
 const cartReducers = createReducer(initialState, (builder) => {
   builder
     .addCase(addProduct, (state, action) => {
-      const product = state.cart.find(product => product.id === action.payload.idProduct)
+      const { idProduct, productStock, productName, productPrice, productPhoto } = action.payload
+      const product = state.cart.find(product => product.id === idProduct)
       if(!product) {
-        return void (state.cart.push({id: action.payload.idProduct, product_id: action.payload.idProduct, quantity: 1}))
+        return void (state.cart.push({id: idProduct, name: productName, photo: productPhoto, price: productPrice, quantity: 1, stock: productStock}))
       }
-      if (product.quantity <= action.payload.stock) {
+      if (product.quantity <= productStock) {
         return void (product.quantity++)
       }
     })

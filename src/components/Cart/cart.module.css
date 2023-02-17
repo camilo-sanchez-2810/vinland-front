@@ -73,7 +73,7 @@
 }
 .productQuantity {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .quantityContent {
   display: flex;
