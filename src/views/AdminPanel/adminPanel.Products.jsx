@@ -14,7 +14,7 @@ export default function AdminPanelP() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
   const [ change, setChange ] = useState(false);
-  const [ page, setPages] = useState(1);
+  const [ page, setPage] = useState(1);
 
 
   useEffect(() => {
@@ -22,15 +22,9 @@ export default function AdminPanelP() {
     dispatch(getProducts(page));
   }, [change]);
 
-  const allProducts = useSelector((store) => store?.products);
+  const allProducts = useSelector((store) => store?.products?.products);
   console.log(allProducts)
 
-  const next = () => {
-    setPages(page +1)
-  }
-const prev = () => {
-  setPages(page -1)
-}
 
 
   const deleted = () => {
@@ -67,12 +61,21 @@ const prev = () => {
     try {
       const headers = { headers: { Authorization: `Bearer ${token}` } };
       await axios.delete(`http://localhost:8080/api/product/${id}`, headers);
-      console.log(id)
       setChange(!change)
     } catch (error) {
       console.log(error);
     }
   };
+
+  const prev = () => {
+    setPage(page - 1)
+    setChange(!change)
+}
+const next = () => {
+  setPage(page + 1)
+  setChange(!change)
+}
+
   
 
   return (
@@ -99,7 +102,45 @@ const prev = () => {
           <h3 className={styles.h2Admin}>Productos</h3>
         </div>
         <div className={styles.tableContain}>
-            
+        <table className={styles.table1}>
+             {allProducts?.map((card, index) => {
+                    return (
+                      <tr className={styles.trr} key={index}>
+                        <td className={styles.email1}>
+                          {card.artist}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.name}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.genre.name}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.stock}
+                        </td>
+                        <td  className={styles.lapiz}>
+                        <img /*  onClick={ () => handleClick(card._id)}  */
+                            className={styles.iconitolP}
+                            src="assets/images/lapices.png"
+                            alt=""
+                          />
+                        </td>
+                        <td  className={styles.tacho1}>
+                        <img  onClick={ () => handleClick(card._id)} 
+                            className={styles.iconitoP}
+                            src="assets/images/tacho.png"
+                            alt=""
+                          />
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  
+            </table>
+            <div className={styles.buttons}>
+                    <button className={styles.butprevnext} onClick={prev}>Prev</button>
+                    <button className={styles.butprevnext} onClick={next}>Next</button>
+                </div>
         </div>
       </div>
     </main>

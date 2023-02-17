@@ -199,6 +199,8 @@
     border-radius: 20px;
 }
 
+
+
 .h2contain{
     display: flex;
     flex-direction: column;
@@ -249,7 +251,6 @@ td {
     border: none;
     color: #484964;
 	padding: 3px;
-	width: 30px;
 	height: 50px;
 }
 th {
@@ -295,6 +296,28 @@ width: 600px;
     
  
 }
+.iconitolP{
+    width: 30px;
+    height: 30px;
+}
+.iconitolP:hover{
+    
+    filter: invert(100%);
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    
+ 
+}
+.iconitoP{
+    width: 30px;
+    height: 40px;
+}
+.iconitoP:hover{
+    
+    filter: invert(100%);
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    
+ 
+}
 .tacho{
     background-color: #d43939;
     background-size: 5% 5%;
@@ -302,11 +325,43 @@ width: 600px;
 .tacho:hover{
     filter: saturate(130%);
 }
+.lapiz{
+    background-color: #dfefe6;
+}
+.lapiz:hover{
+    filter: saturate(300%);
+}
+
+.tacho1{
+    background-color: #d43939;
+    width: 50px;
+    
+}
+.tacho1:hover{
+    filter: saturate(130%);
+}
 .email{
     font-size: 20px;
 }
-
-
+.email1{
+    font-size: 20px;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.butprevnext{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 15px;
+    background-color: #dfefe6;
+}
 /* .tdLeft{
     width: 10vw;
     text-align: left;
