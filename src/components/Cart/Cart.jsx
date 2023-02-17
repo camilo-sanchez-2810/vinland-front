@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./cart.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,7 @@ const { increaseQuantity, decreaseQuantity } = cartActions
 const Cart = ({ show, handleShow }) => {
 	const { cart } = useSelector((store) => store.cart);
   const dispatch = useDispatch()
+  const [total, setTotal] = useState(0)
 	const handleIncrease = (id, stock) => {
 		dispatch(increaseQuantity({ idProduct: id, productStock: stock }));
 	};
@@ -49,6 +50,10 @@ const Cart = ({ show, handleShow }) => {
 						</p>
 					)}
 				</div>
+        <div className={styles.cartFooter}>
+          <span className={styles.cartTotal}>Total: ${total}</span>
+          <button className={styles.cartBuy}>Comprar</button>
+        </div>
 			</div>
 		</div>
 	);

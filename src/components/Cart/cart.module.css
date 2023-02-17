@@ -43,6 +43,8 @@
 }
 .products {
   margin-top: 1rem;
+  height: 85%;
+  overflow-y: scroll;
 }
 .emptyMessage {
   text-align: center;
@@ -54,6 +56,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  position: relative;
 }
 .productImg {
   width: 90px;
@@ -89,7 +92,74 @@
   background: none;
   cursor: pointer;
 }
+.deleteProduct {
+  position: absolute;
+  left: 85%;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: transparent;
+  transition: color ease .2s;
+}
+.product:hover .deleteProduct {
+  color: #ccc
+}
+.products::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
 
+.products::-webkit-scrollbar:vertical {
+  width:6px;
+}
+
+.products::-webkit-scrollbar-button:increment,.products::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.products::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.products::-webkit-scrollbar-thumb {
+  background-color: #ccc0;
+  border-radius: 20px;
+  transition: all ease .3s;
+}
+
+.products:hover::-webkit-scrollbar-thumb {
+  background-color: #ccc4;
+}
+
+.products::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+.products {
+  scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+.cartFooter {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartTotal {
+  font-size: 1.4rem;
+}
+.cartBuy {
+  font-size: 1.4rem;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  color: #ccc;
+  background-color: #1F292A;
+  cursor: pointer;
+  transition: background ease .5s;
+}
+.cartBuy:hover {
+  background-color: #283739;
+}
 @-webkit-keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
