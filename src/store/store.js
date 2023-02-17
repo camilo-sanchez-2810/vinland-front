@@ -28,9 +28,8 @@ const store = configureStore({
         admin: adminReducers,
         user: userReducers,
         buyer: buyerReducer,
-        alert: alertReducer
+        alert: alertReducer,
         allProduct: getproductsReducer,
-        buyer: buyerReducer
     }
 })
 
