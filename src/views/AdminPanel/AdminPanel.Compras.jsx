@@ -20,8 +20,6 @@ export default function AdminPanelC() {
     dispatch(getUsers(token));
   }, [change]);
   
-  const adminUser = useSelector((state) => state.admin.users);
-  console.log(adminUser)
   const allProducts = useSelector((store) => store?.products?.products);
   console.log(allProducts)
 
@@ -59,7 +57,6 @@ export default function AdminPanelC() {
       if (resultado.value) {
         // Hicieron click en "Sí"
         deleteUser(userId);
-        console.log(userId)
         deleted();
       } else {
         // Dijeron que no
@@ -72,7 +69,6 @@ export default function AdminPanelC() {
     try {
       const headers = { headers: { Authorization: `Bearer ${token}` } };
       await axios.delete(`http://localhost:8080/api/admin/${id}`, headers);
-      console.log(id)
       setChange(!change)
     } catch (error) {
       console.log(error);

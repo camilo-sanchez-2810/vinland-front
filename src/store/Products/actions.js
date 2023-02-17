@@ -21,9 +21,10 @@ console.log(error.response.data);
 
 const getProducts = createAsyncThunk(
     'get_all_products',
-    async() => {
+    async(page) => {
        try{
-        let response = await axios.get(`http://localhost:8080/api/product`)
+        let response = await axios.get(`http://localhost:8080/api/product?page=${page}`)
+        console.log(response)
         return {
             success: true,
             response: response.data.response,

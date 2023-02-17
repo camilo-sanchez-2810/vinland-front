@@ -8,35 +8,25 @@ import { Link as Anchor } from 'react-router-dom'
 import productsActions from "../../store/Products/actions";
 
 const {getUsers} = adminActions
-const { get_all_products} = productsActions
+const {getProducts} = productsActions
 
 export default function AdminPanelP() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
   const [ change, setChange ] = useState(false);
-  
+  const [ page, setPage] = useState(1);
+
 
   useEffect(() => {
     dispatch(getUsers(token));
+    dispatch(getProducts(page));
   }, [change]);
-  
-  const adminUser = useSelector((state) => state.admin.users);
-  console.log(adminUser)
+
   const allProducts = useSelector((store) => store?.products?.products);
   console.log(allProducts)
 
-  const lockUser = async (e) => {
-    try {
-      const data = {}
-      const headers = { headers: { Authorization: `Bearer ${token}` } };
-      await axios.put(`http://localhost:8080/api/admin/${e.target.value}`, data, headers,);
-      
-      setChange(!change)
-     
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
+
   const deleted = () => {
     Swal.fire({
       position: "center",
@@ -58,8 +48,7 @@ export default function AdminPanelP() {
     }).then((resultado) => {
       if (resultado.value) {
         // Hicieron click en "Sí"
-        deleteUser(userId);
-        console.log(userId)
+        deleteProduct(userId);
         deleted();
       } else {
         // Dijeron que no
@@ -68,16 +57,25 @@ export default function AdminPanelP() {
     });
   };
 
-  const deleteUser = async (id) => {
+  const deleteProduct = async (id) => {
     try {
       const headers = { headers: { Authorization: `Bearer ${token}` } };
-      await axios.delete(`http://localhost:8080/api/admin/${id}`, headers);
-      console.log(id)
+      await axios.delete(`http://localhost:8080/api/product/${id}`, headers);
       setChange(!change)
     } catch (error) {
       console.log(error);
     }
   };
+
+  const prev = () => {
+    setPage(page - 1)
+    setChange(!change)
+}
+const next = () => {
+  setPage(page + 1)
+  setChange(!change)
+}
+
   
 
   return (
@@ -104,7 +102,45 @@ export default function AdminPanelP() {
           <h3 className={styles.h2Admin}>Productos</h3>
         </div>
         <div className={styles.tableContain}>
-            
+        <table className={styles.table1}>
+             {allProducts?.map((card, index) => {
+                    return (
+                      <tr className={styles.trr} key={index}>
+                        <td className={styles.email1}>
+                          {card.artist}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.name}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.genre.name}
+                        </td>
+                        <td className={styles.email1}>
+                          {card.stock}
+                        </td>
+                        <td  className={styles.lapiz}>
+                        <img /*  onClick={ () => handleClick(card._id)}  */
+                            className={styles.iconitolP}
+                            src="assets/images/lapices.png"
+                            alt=""
+                          />
+                        </td>
+                        <td  className={styles.tacho1}>
+                        <img  onClick={ () => handleClick(card._id)} 
+                            className={styles.iconitoP}
+                            src="assets/images/tacho.png"
+                            alt=""
+                          />
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  
+            </table>
+            <div className={styles.buttons}>
+                    <button className={styles.butprevnext} onClick={prev}>Prev</button>
+                    <button className={styles.butprevnext} onClick={next}>Next</button>
+                </div>
         </div>
       </div>
     </main>
