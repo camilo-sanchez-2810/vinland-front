@@ -87,7 +87,7 @@ export default function Shopping() {
                     <div className={style.products}>
                         {allProducts?.map((product, index) => {
                        return (
-                        <ProductItem key={index} id={product._id} name={product.name} price={product.price} photo={product.photo} />
+                        <ProductItem key={index} id={product._id} name={product.name} price={product.price} photo={product.photo} stock={product.stock} />
                        )
                     })}
                     </div>

@@ -1,26 +1,33 @@
 import cartActions from './actions'
 import { createReducer } from '@reduxjs/toolkit'
 
-const { addProduct } = cartActions
+const { addProduct, increaseQuantity, decreaseQuantity } = cartActions
 
-const initialState = []
+const initialState = {
+  cart: []
+}
 const cartReducers = createReducer(initialState, (builder) => {
   builder
     .addCase(addProduct, (state, action) => {
-      const exist = state.some(product => product.product_id === action.payload)
-      console.log(state)
-      let newState = []
-      if(exist) {
-        newState = state.map((product) => {
-          if(product.product_id === action.payload) {
-            return {...product, quantity: product.quantity + 1}
-          }
-          return product
-        })
-      } else {
-        newState = [...state, {product_id: action.payload, quantity: 1}]
+      const product = state.cart.find(product => product.id === action.payload.idProduct)
+      if(!product) {
+        return void (state.cart.push({id: action.payload.idProduct, product_id: action.payload.idProduct, quantity: 1}))
       }
-      return newState
+      if (product.quantity <= action.payload.stock) {
+        return void (product.quantity++)
+      }
+    })
+    .addCase(increaseQuantity, (state, action) => {
+      const product = state.cart.find(product => product.id === action.payload.idProduct)
+      if (product.quantity <= action.payload.stock) {
+        return void (product.quantity++)
+      }
+    })
+    .addCase(decreaseQuantity, (state, action) => {
+      const product = state.cart.find(product => product.id === action.payload)
+      if(product.quantity > 0) {
+        return void (product.quantity--)
+      }
     })
 })
 
