@@ -1,7 +1,7 @@
 import cartActions from './actions'
 import { createReducer } from '@reduxjs/toolkit'
 
-const { addProduct, increaseQuantity, decreaseQuantity } = cartActions
+const { addProduct, increaseQuantity, decreaseQuantity, deleteCart } = cartActions
 
 const initialState = {
   cart: []
@@ -35,6 +35,11 @@ const cartReducers = createReducer(initialState, (builder) => {
       return void ({
         ...state
       })
+    })
+    .addCase(deleteCart, (state, action) => {
+      return {
+        cart: []
+      }
     })
 })
 

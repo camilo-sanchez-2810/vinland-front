@@ -18,6 +18,11 @@ const decreaseQuantity = createAction('decrease-quantity', (idProduct) => {
   }
 })
 
-const cartActions = { addProduct, increaseQuantity, decreaseQuantity }
+const deleteCart = createAction('delete-all', () => {
+  return {
+    payload: "delete cart"
+  }
+})
+const cartActions = { addProduct, increaseQuantity, decreaseQuantity, deleteCart }
 
 export default cartActions
