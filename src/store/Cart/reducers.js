@@ -20,15 +20,21 @@ const cartReducers = createReducer(initialState, (builder) => {
     })
     .addCase(increaseQuantity, (state, action) => {
       const product = state.cart.find(product => product.id === action.payload.idProduct)
-      if (product.quantity <= action.payload.stock) {
+      if (product.quantity <= action.payload.productStock) {
         return void (product.quantity++)
       }
+      return void ({
+        ...state
+      })
     })
     .addCase(decreaseQuantity, (state, action) => {
       const product = state.cart.find(product => product.id === action.payload)
       if(product.quantity > 0) {
         return void (product.quantity--)
       }
+      return void ({
+        ...state
+      })
     })
 })
 

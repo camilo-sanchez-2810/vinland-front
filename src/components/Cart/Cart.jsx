@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./cart.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +18,11 @@ const Cart = ({ show, handleShow }) => {
 	const handleDecrease = (id) => {
 		dispatch(decreaseQuantity(id));
 	};
+	useEffect(()=> {
+		cart?.forEach(product => {
+			setTotal(product.price * product.quantity)
+		});
+	})
 	return (
 		<div className={`${styles.container} ${show ? styles.showContainer : ""}`}>
 			<div className={`${styles.cart} ${show ? styles.showCart : ""}`}>
