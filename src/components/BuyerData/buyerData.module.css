@@ -1,0 +1,23 @@
+.buyerData {
+  margin-top: .5rem;
+}
+.labels {
+  margin-top: .4rem;
+  font-size: 1.2rem;
+}
+.labels span {
+  font-weight: 800;
+}
+.buyerData button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #1F292A;
+  color: #ccc;
+  transition: background ease .5s;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+.buyerData button:hover {
+  background-color: #283739;
+}
