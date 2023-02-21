@@ -3,6 +3,13 @@
     display: flex;
     flex-direction: column;
 }
+html{
+    background-image: url(../../../public/assets/images/bgDetail.jpg);
+    background-color: #c9cdd050;
+    background-size: 100% 70%;
+
+
+}
 .vinylbg{
     background-image: url(../../../public/assets/images/bgDetail.jpg);
     background-size: cover;
@@ -135,9 +142,19 @@ audio{
 
 
 }
+.demo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.vol{
+    width: 50px;
+    height: 50px;
+}
 .text{
     width: 90%;
     font-size: 15px;
+
 
 }
 
@@ -202,4 +219,11 @@ text-shadow: 2px 2px #000000;
 .cartImg:hover{
     cursor: pointer;
 
+}
+
+@media (min-width: 500px) and (max-width: 1400px ) {
+    .textCont{
+        gap: 30px;
+    }
+    
 }

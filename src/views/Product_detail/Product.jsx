@@ -30,6 +30,8 @@ export default function Product() {
     const description = () => {
         Swal.fire({
             title: 'Descripcion',
+            background: ' #2e2e2e',
+            color: '#fff',
             text: `${product.description}`,
             imageUrl: `${product.photo}`,
             imageWidth: 400,
@@ -41,6 +43,8 @@ export default function Product() {
       const demo = () => {
         Swal.fire({
             title: `${product.name}`,
+            color: '#fff',
+            background: ' #2e2e2e',
             html:
               `<iframe width="400" height="300" src="https://www.youtube.com/embed/${product.demo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             imageWidth: 400,
@@ -75,7 +79,10 @@ export default function Product() {
                     <h3 className={style.h31}>{product.artist}</h3>
                     <h3 className={style.h32}>{product.name}</h3>
                     <button onClick={description} className={style.cart}>Descripcion</button>
+                    <div className={style.demo}>
                     <button onClick={demo} className={style.cart}>DEMO</button>
+                      <img className={style.vol} src="/assets/images/auri1.png" alt="" />
+                    </div>
                     <div className={style.carritoCOnt}>
                     <img className={style.vinImg} src="/assets/images/vinilo.png" alt="" />
                     
