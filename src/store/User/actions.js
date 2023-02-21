@@ -30,7 +30,9 @@ const update_one = createAsyncThunk(
             }
         }
         catch(error){
-            console.log(error);
+            return{
+             response: error.data.response
+            }
         }
     }
 )

@@ -139,8 +139,8 @@ const next = () => {
                   
             </table>
             <div className={styles.buttons}>
-                    <button className={styles.butprevnext} onClick={prev}>Prev</button>
-                    <button className={styles.butprevnext} onClick={next}>Next</button>
+                    {page === 1 ?  <div></div>:<button className={styles.butprevnext} onClick={prev}>Prev</button> }
+                    {page === 2 ?  <div></div> : <button className={styles.butprevnext} onClick={next}>Next</button>}
                 </div>
         </div>
       </div>
