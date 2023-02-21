@@ -1,32 +1,45 @@
 import cartActions from './actions'
 import { createReducer } from '@reduxjs/toolkit'
 
-const { addProduct } = cartActions
+const { addProduct, increaseQuantity, decreaseQuantity, deleteCart } = cartActions
 
 const initialState = {
-  products: [],
-  total: 0
+  cart: []
 }
-
 const cartReducers = createReducer(initialState, (builder) => {
   builder
     .addCase(addProduct, (state, action) => {
-      const exist = state.products.some(product => product.product_id === action.payload)
-      let newState = {}
-      if(!exist) {
-        newState = {
-          products: [...state.products, { product_id: action.payload, quantity: 1 }],
-          total: state.total
-        }
-      } else {
-        newState = {
-          products: state.products.map((product) => {
-            return product.product_id === action.payload ? ({...product, quantity: product.quantity +1}) : product
-          }),
-          total: state.total
-        }
+      const { idProduct, productStock, productName, productPrice, productPhoto } = action.payload
+      const product = state.cart.find(product => product.id === idProduct)
+      if(!product) {
+        return void (state.cart.push({id: idProduct, name: productName, photo: productPhoto, price: productPrice, quantity: 1, stock: productStock}))
       }
-      return newState
+      if (product.quantity <= productStock) {
+        return void (product.quantity++)
+      }
+    })
+    .addCase(increaseQuantity, (state, action) => {
+      const product = state.cart.find(product => product.id === action.payload.idProduct)
+      if (product.quantity <= action.payload.productStock) {
+        return void (product.quantity++)
+      }
+      return void ({
+        ...state
+      })
+    })
+    .addCase(decreaseQuantity, (state, action) => {
+      const product = state.cart.find(product => product.id === action.payload)
+      if(product.quantity > 1) {
+        return void (product.quantity--)
+      }
+      return void ({
+        ...state
+      })
+    })
+    .addCase(deleteCart, (state, action) => {
+      return {
+        cart: []
+      }
     })
 })
 

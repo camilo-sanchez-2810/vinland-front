@@ -7,6 +7,7 @@ import SignUp from '../views/login/SignUp.jsx';
 import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
+import Payment from "../views/Payment/Payment";
 import Edit from "../views/Edit_profile/Edit";
 import Verify from "../views/Verify/Verify";
 import AdminPanelP from "../views/AdminPanel/adminPanel.Products";
@@ -33,8 +34,11 @@ export const indexRouter = createBrowserRouter([
             {
             path:"/profile",
             element: <Profile/>
+            },
+            {
+                path: '/payment/:purchase_id',
+                element: <Payment />
             }
-            
     ]
     },
     {

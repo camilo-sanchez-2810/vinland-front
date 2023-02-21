@@ -6,10 +6,10 @@ import cartActions from "../../store/Cart/actions";
 
 const { addProduct } = cartActions
 
-const ProductItem = ({id, photo, name, price}) => {
+const ProductItem = ({id, photo, name, price, stock}) => {
   const dispatch = useDispatch()
-  const handleAdd = (idProduct) => {
-    dispatch(addProduct(idProduct))
+  const handleAdd = (idProduct, productStock, productPrice, productName, productPhoto) => {
+    dispatch(addProduct({idProduct, productStock, productName, productPrice, productPhoto}))
   }
 	return (
 		<div className={style.card}>
@@ -28,7 +28,7 @@ const ProductItem = ({id, photo, name, price}) => {
 					</div>
 					<div className={style.containerCart}>
 						<h2 className={style.productPrice}>{price}$</h2>
-							<button className={style.carrito} onClick={e => handleAdd(id)}>
+							<button className={style.carrito} onClick={e => handleAdd(id, stock, price, name, photo)}>
 								<img src='/assets/images/cart2.png' alt='' />
 							</button>
 					</div>
