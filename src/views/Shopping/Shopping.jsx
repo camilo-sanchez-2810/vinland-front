@@ -14,6 +14,7 @@ export default function Shopping() {
     const filter = useSelector((store) => store.filter?.filterGender);
     const dispatch = useDispatch()
     const [pages, setPages] = useState(1);
+    const [productsPage, setProductsPage] = useState(6)
     const inputText = useRef(text)
     const [load, setLoad] = useState(false);
 
@@ -25,7 +26,17 @@ export default function Shopping() {
         }))
     }, [load, filter, pages])
 
-    const prev = () => {
+
+    const indexLastProduct = pages * productsPage
+    const indexFirstProduct = indexLastProduct - productsPage
+    const currentProducts = allProducts.slice(indexFirstProduct, indexLastProduct)
+    const total = Math.ceil(allProducts.length, productsPage)
+
+    const handlePageChange = (pageNumber) => {
+      setPages(pageNumber)
+    }
+
+/*     const prev = () => {
         setPages(pages - 1)
     }
     const boton2 = () => {
@@ -59,7 +70,7 @@ export default function Shopping() {
             </button>
           );
         }
-      };
+      }; */
 
 
     return (
@@ -92,9 +103,21 @@ export default function Shopping() {
                     </div>
                     }
                 <div className={style.buttons}>
-                    {boton2()}
-                    {boton()}
-                    
+                    {pages > 1 ? 
+                    <button className={style.prevNext} onClick={() => handlePageChange(pages - 1)}>             
+                      <img src="/assets/images/arrowSolid.png" alt="" className={style.imageBtn}/> 
+                    </button>
+                    :
+                    <div className={style.vacio}></div>
+                    }
+                    {pages < total ? (
+                      <button className={style.prevNext} onClick={() => handlePageChange(pages + 1)}>
+                        <img src="/assets/images/rightSolid.png" alt="" className={style.imageBtn}/>
+                      </button>
+                    )
+                      :
+                      <div  className={style.vacio}></div>
+                    }
                 </div>
             </div>
         </div>

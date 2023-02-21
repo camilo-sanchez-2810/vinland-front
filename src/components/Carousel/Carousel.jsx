@@ -22,7 +22,7 @@ export default function CarouselHome() {
         <Carousel infiniteLoop={true} autoPlay={true} showStatus={false} transitionTime={200} interval={4000} className={style.carousel}>
             {
                 products?.map((product) => {
-                    return (<CaroueselItem name={product.name} description={product.description} photo={product.photo} key={product._id} />)
+                    return (<CaroueselItem name={product.name} description={product.description} photo={product.photo} key={product._id} id={product._id}/>)
                 })
             }
         </Carousel>

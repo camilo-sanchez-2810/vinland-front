@@ -4,6 +4,7 @@ import { Link as Anchor } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import buyerActions from '../../store/Buyer/actions'
 import userActions from '../../store/User/actions'
+import Alerts from '../Alert/Alert'
 const {get_buyer, update_buyer} = buyerActions
 const {update_one} = userActions
 
@@ -59,6 +60,7 @@ export default function Editform() {
         <input type="text" placeholder={buyer.country} ref={inputCountry} className={style.input}/>
         <input type="submit" value='Enviar' className={style.submit} />
       </form>
+      <Alerts/>
 </div>
   )
 }

@@ -145,3 +145,6 @@
     flex-direction: column;
     justify-content: center;
 }
+.vacio{
+    width: 4vw;
+}
