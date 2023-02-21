@@ -13,19 +13,39 @@
   gap: 1rem;
 }
 .buyer {
-  border: 2px solid red;
+  border: 2px solid #aaa;
   padding: .6rem;
   flex: 1;
+  border-radius: 10px;
+  background-color: #cececea6;
 }
 .pay {
   border: 2px solid green;
   padding: .6rem;
-  flex: 1;
+  flex: 2;
 }
 .buyerData {
-  border: 2px solid blue;
   margin-top: .5rem;
 }
 .labels {
   margin-top: .4rem;
+}
+.labels span {
+  font-weight: 800;
+}
+.buyerData button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #1F292A;
+  color: #ccc;
+  transition: background ease .5s;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+.buyerData button:hover {
+  background-color: #283739;
+}
+.editBuyer {
+  
 }
