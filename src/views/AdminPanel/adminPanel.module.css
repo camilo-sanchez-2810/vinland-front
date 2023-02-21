@@ -437,6 +437,9 @@ width: 600px;
     border: 1px solid black;
     font-size: 18px;
 }
+.vacio{
+    width: 8rem;
+}
 /* .mainAdmin{
     width: 100%;
     

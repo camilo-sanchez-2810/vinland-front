@@ -15,17 +15,25 @@ export default function AdminPanelP() {
   const token = localStorage.getItem("token");
   const [ change, setChange ] = useState(false);
   const [ page, setPage] = useState(1);
+  const [productsPage, setProductsPage] = useState(6)
 
 
   useEffect(() => {
     dispatch(getUsers(token));
     dispatch(getProducts(page));
-  }, [change]);
+  }, [page]);
 
   const allProducts = useSelector((store) => store?.products?.products);
   console.log(allProducts)
 
+  const indexLastProduct = page * productsPage
+  const indexFirstProduct = indexLastProduct - productsPage
+  const currentProducts = allProducts.slice(indexFirstProduct, indexLastProduct)
+  const total = Math.ceil(allProducts.length, productsPage)
 
+  const handlePageChange = (pageNumber) => {
+    setPage(pageNumber)
+  }
 
   const deleted = () => {
     Swal.fire({
@@ -66,17 +74,6 @@ export default function AdminPanelP() {
       console.log(error);
     }
   };
-
-  const prev = () => {
-    setPage(page - 1)
-    setChange(!change)
-}
-const next = () => {
-  setPage(page + 1)
-  setChange(!change)
-}
-
-  
 
   return (
     <main className={styles.mainPanel}>
@@ -139,9 +136,22 @@ const next = () => {
                   
             </table>
             <div className={styles.buttons}>
-                    <button className={styles.butprevnext} onClick={prev}>Anterior</button>
+                    {page > 1 ? 
+                    <button className={styles.butprevnext} onClick={() => handlePageChange(page - 1)}>             
+                      Anterior 
+                    </button>
+                    :
+                    <div className={styles.vacio}></div>
+                    }
                     <Anchor className={styles.butprevnext} to={"/create-product"}>Crear Producto</Anchor>
-                    <button className={styles.butprevnext} onClick={next}>Siguiente</button>
+                    {page < total ? (
+                      <button className={styles.butprevnext} onClick={() => handlePageChange(page + 1)}> 
+                      Siguiente
+                      </button>
+                    )
+                      :
+                      <div  className={styles.vacio}></div>
+                    }
             </div>
         </div>
       </div>
