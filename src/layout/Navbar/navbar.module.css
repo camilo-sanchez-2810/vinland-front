@@ -1,8 +1,11 @@
 .container{
-    margin: 10px;
-    height: 10vh;
+    padding: 10px 10px 30px 10px;
+    height: 20vh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    z-index: 30;
 }
 .logo{
 height: 9vh;
@@ -13,13 +16,76 @@ height: 9vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 30;
+}
+.cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4E3737;
 }
 .anchor{
     margin: 0 15px 0 15px; 
     text-decoration: none;
-    color: #7D5034;
+    color:#4E3737;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 650;
+    transition: color ease .3s;
 }
 .anchor:hover{
-    transition: 0.2s ;
-    font-size: 18px;
+    color: #492626;
+}
+.navbar{
+    display: none;
+}
+@media screen and (max-width: 320px) {
+  .anchorContainer {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    margin: 4vh 2vh 2vh 2vh;
+    border: none;
+    background-color: rgba(199, 199, 199, 0);
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+    height: 180vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .desplegado {
+    opacity: 1;
+    pointer-events: all;
+    height: 100%;
+    left: 0%;
+    transition: 0.3s ease all;
+  }
+
+  .anchor {
+    margin: 2vh;
+    opacity: 0;
+  }
+
+  .anchorContainer.desplegado .anchor {
+    opacity: 1;
+  }
 }

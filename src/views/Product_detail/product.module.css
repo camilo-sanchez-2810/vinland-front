@@ -1,0 +1,227 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ html{
+    background-color: #c9cdd050;
+    background-size: 100% 70%;
+
+
+} 
+.vinylbg{
+    background-image: url(../../../public/assets/images/bgDetail.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.brown{
+    background-color: #cebfe093;
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
+}
+.back{ 
+    margin-left: 2vw;
+    margin-bottom: 15vh;
+    color: white;
+    text-decoration: none;
+    width: 4vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.back:hover{
+    transition: 0.3s ease;
+}
+
+.anchorImg{
+    object-fit: contain;
+}
+.h3Container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+}
+.vinImg{
+    height: 120px;
+    width: 120px;
+}
+.card{
+  
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    position: relative;
+    bottom: 46vh;
+    left: 20vw;
+    background-color: #e6ddcc;
+    height: 75vh;
+    width: 60%;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.img{
+    width: 85%;
+    height: 90%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.imgCont{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.imgContainer{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.textCont{
+width: 30%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 50px;
+
+}
+.carritoCOnt{
+    position: relative;
+    bottom:5%;
+    right: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 10px;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #e6ddcc;
+    
+  }
+.h31{
+    font-size: 28px;
+ }
+.h32{ 
+font-size: 19px;
+}
+audio{
+    width: 80%;
+}
+.asdContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.textContainer{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.demo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.vol{
+    width: 50px;
+    height: 50px;
+}
+.text{
+    width: 90%;
+    font-size: 15px;
+
+
+}
+
+.price{
+position: relative;
+bottom: 31%;
+right: 0%;
+font-weight: bold;
+font-size: 33px;
+color: rgb(45, 174, 90);
+text-shadow: 2px 2px #000000;
+
+}
+
+.cart1{
+    background-color:rgba(255, 255, 255, 0.788);
+    color: black;
+    border-radius: 1rem;
+    font-size: 17px;
+    font-weight: 600;
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.788);
+    text-decoration: none;
+    color: black;
+    height: 5vh;
+    width: 8vw;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    
+}
+.cart:hover{
+    background-color: #000000;
+    color: white;
+}
+
+.cartImg{
+    width: 65px;
+    height: 65px;
+}
+.cartbut{
+    background: none;
+    border: none;
+    background-color:rgba(255, 255, 255, 0.788);
+    border-radius: 1rem;
+    height: 90px;
+    width: 90px;
+
+}
+.cartbut:hover{
+    filter:invert(500%);
+    cursor: pointer;
+}
+
+.cartImg:hover{
+    cursor: pointer;
+
+}
+
+@media (min-width: 500px) and (max-width: 1400px ) {
+    .textCont{
+        gap: 30px;
+    }
+    
+}

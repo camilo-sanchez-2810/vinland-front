@@ -1,5 +1,4 @@
 .container{
-    position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
@@ -32,4 +31,10 @@
 }
 .logoText{
     margin-left: 10px;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
 }

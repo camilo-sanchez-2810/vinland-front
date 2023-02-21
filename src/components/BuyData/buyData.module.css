@@ -1,0 +1,43 @@
+.goPay button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #1F292A;
+  color: #ccc;
+  transition: background ease .5s;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+.goPay button:hover {
+  background-color: #283739;
+}
+.products {
+  margin-top: .4rem;
+}
+.product {
+  display: flex;
+  margin-top: .5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: .6rem;
+}
+.product img {
+  width: 70px;
+  height: 70px;
+}
+.label {
+  margin-top: .4rem;
+  font-size: 1.2rem;
+}
+.label span {
+  font-weight: 800;
+}
+.goPay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  border-top: 1px solid #aaa;
+  padding: .5rem;
+}
