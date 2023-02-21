@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .mainPanel{
-    background-color: #E7CFA0;
+    background-color: #dfefe6;
     width: 100%;
     /* 
  */
@@ -32,21 +32,146 @@
 .button2{
     display: flex;
     height: 13vh;
-    gap: 10px;
-
+    padding: 2px;
 
 }
-.buttones{
+.buttones1{
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ top: 2px;
+ right: 230px;
+ height: 50px;
+ width: 7rem;
+ margin: 15px;
+ font-size: 20px;
+ background-color: rgba(0, 0, 0, 0.664);
+ color: white;
+ border-radius: 20px 0 0 20px;
+ border: 1px solid black;
+
+}
+.buttonesuser{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 230px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color: #dfefe6;
+    color: rgb(0, 0, 0);
+    border-radius: 20px 0 0 20px;
+    border: 1px solid black;
+}
+
+
+.buttonespro{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 120px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:    rgba(0, 0, 0, 0.664);
+    color: white;
+    border: 1px solid black;
+}
+
+
+.buttones2{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 120px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:  #dfefe6;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+
+   }
+   .buttonesu{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 230px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color: #dfefe6;
+    color: white;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid black;
+   }
+   .buttones3{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:  #dfefe6;
+    color: rgb(0, 0, 0);
+    border-radius: 0 20px 20px 0;
+    border: 1px solid black;
+    
+   }
+.buttoneCom{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    height: 50px;
+    width: 7rem;
+    margin: 15px;
+    font-size: 20px;
+    background-color:rgba(0, 0, 0, 0.664);
+    color: rgb(255, 255, 255);
+    border-radius: 0 20px 20px 0;
+    border: 1px solid black;
+}
+.buttones {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     border-radius: 20px;
+    height: 50px;
     width: 6rem;
     margin: 15px;
     font-size: 20px;
-    background-color: #E7CFA0;
-    color: white;
+    background-color: #dfefe6;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
 }
 
 .containH1P{
@@ -61,7 +186,7 @@
 
 .bgmain2{
     height: 100vh;
-    background-color: #E7CFA0;
+    background-color: #dfefe6;
 }
 
 .container2{
@@ -69,10 +194,12 @@
     background-color: white;
     top: 450px;
     left: 10%;
-    height: 120vh;
+    height: 110vh;
     width: 80vw;
     border-radius: 20px;
 }
+
+
 
 .h2contain{
     display: flex;
@@ -86,7 +213,8 @@
 .h1Admin{
     font-size: 50px;
     margin-top: 100px;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-shadow: #e6ddcc 1px 1px 1px;
 }
 
 .h2Admin{
@@ -123,7 +251,6 @@ td {
     border: none;
     color: #484964;
 	padding: 3px;
-	width: 30px;
 	height: 50px;
 }
 th {
@@ -141,25 +268,6 @@ th {
     border-radius: 50%;
 }
 
-.butonCompany {
-    border: 1px solid #EEEEF2;
-    border-bottom: 1px solid #4338CA;
-    font-weight: bold;
-    font-size: 20px;
-    width: 300px;
-    height: 50px;
-    border-radius: 15px 0 0 0;
-
-}
-.butonAuthor{ 
-    border: 1px solid #EEEEF2;
-    border-bottom: 1px solid #4338CA;
-    font-size: 20px;
-    font-weight: bold;
-    width: 300px;
-    height: 50px;
-    border-radius: 0 15px 0 0;
-}
 
 .trr{
 text-align: center;
@@ -188,6 +296,28 @@ width: 600px;
     
  
 }
+.iconitolP{
+    width: 30px;
+    height: 30px;
+}
+.iconitolP:hover{
+    
+    filter: invert(100%);
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    
+ 
+}
+.iconitoP{
+    width: 30px;
+    height: 40px;
+}
+.iconitoP:hover{
+    
+    filter: invert(100%);
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    
+ 
+}
 .tacho{
     background-color: #d43939;
     background-size: 5% 5%;
@@ -195,11 +325,50 @@ width: 600px;
 .tacho:hover{
     filter: saturate(130%);
 }
+.lapiz{
+    background-color: #dfefe6;
+}
+.lapiz:hover{
+    filter: saturate(300%);
+}
+
+.tacho1{
+    background-color: #d43939;
+    width: 50px;
+    
+}
+.tacho1:hover{
+    filter: saturate(130%);
+}
 .email{
     font-size: 20px;
 }
-
-
+.email1{
+    font-size: 20px;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    gap: 100px;
+    margin-top: 20px;
+}
+.butprevnext{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 15px;
+    background-color: #dfefe6;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+.butprevnext:hover{
+    background-color: #000000;
+    color: white;
+}
 /* .tdLeft{
     width: 10vw;
     text-align: left;
@@ -224,7 +393,7 @@ width: 600px;
 	width: 72px;
 	height: 30px;
 	display: inline-block;
-	background:  #E7CFA0;
+	background:  #dfefe6;
 	border-radius: 18px;
 	clear: both;
     position: absolute;
@@ -254,6 +423,19 @@ width: 600px;
 }
 .cmtoggle:checked:after {
 	background:#d43939;
+}
+.buttonCreate{
+    background-color:  #dfefe6;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 10vw;
+    color: black;
+    border-radius: 3vh;
+    border: 1px solid black;
+    font-size: 18px;
 }
 /* .mainAdmin{
     width: 100%;
