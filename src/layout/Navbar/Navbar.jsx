@@ -12,6 +12,7 @@ const { cerrar_sesion,iniciar_sesion } = authActions
 
 export default function Navbar({handleShow, show}) {
   let { token,is_online,is_admin } = useSelector(store => store.auth)
+  
   const myMail = useSelector((store) => store.auth.email)
   
 
