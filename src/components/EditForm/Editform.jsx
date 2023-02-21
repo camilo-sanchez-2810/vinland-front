@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import buyerActions from '../../store/Buyer/actions'
 import userActions from '../../store/User/actions'
 import Alerts from '../Alert/Alert'
+import alertActions from '../../store/Alert/actions'
+const {Alert} = alertActions
 const {get_buyer, update_buyer} = buyerActions
 const {update_one} = userActions
 
@@ -19,8 +21,6 @@ export default function Editform() {
   const inputAdd = useRef()
   const inputCity = useRef()
   const inputCountry = useRef()
-  console.log(user);
-  console.log(buyer);
 
   useEffect(() => {
     dispatch(get_buyer(token))
@@ -28,23 +28,43 @@ export default function Editform() {
 
 
 
-  const sendData = (e) => {
+  const sendData = async(e) => {
     e.preventDefault()
-    let data1 = {
+    let user = {
       first_name: inputName.current.value,
       last_name: inputLast.current.value,
       email: inputEmail.current.value  
     }
-    let data2 = {
+    let buyer = {
       address: inputAdd.current.value,
       city: inputCity.current.value,
       country: inputCountry.current.value
     }
-    dispatch(update_one({token, data: data1}))
-    dispatch(update_buyer({token, data: data2}))
-
+    let data1 = {} 
+    let data2 = {}
+    for (let prop in user) {
+      if (user[prop] !== '') {
+        data1[prop] = user[prop];
+      }
+    }
+    for (let prop in buyer) {
+      if (buyer[prop] !== '') {
+        data2[prop] = buyer[prop];
+      }
+    }
+    console.log(data1);
+    console.log(data2);
+    const response1 = await dispatch(update_one({token, data: data1}))
+    const response2 = await dispatch(update_buyer({token, data: data2}))
+    console.log(response1.payload.response);
+    console.log(response2);
+    if(response1.payload?.success && response2.payload?.success){
+      let messages = [response1.payload.response]
+      dispatch(Alert({messages, success:true}))
+  }
   }
 
+  
   return (
     <div className={style.formContainer}>
       <div className={style.back}>
