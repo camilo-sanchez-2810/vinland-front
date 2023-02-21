@@ -1,19 +1,17 @@
 .container{
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-html{
-    background-image: url(../../../public/assets/images/bgDetail.jpg);
+ html{
     background-color: #c9cdd050;
     background-size: 100% 70%;
 
 
-}
+} 
 .vinylbg{
     background-image: url(../../../public/assets/images/bgDetail.jpg);
     background-size: cover;
-    background-position: start;
     height: 80vh;
     width: 100%;
     display: flex;
