@@ -2,7 +2,7 @@ import React from "react";
 import moment from 'moment'
 import styles from './buyData.module.css'
 
-const BuyData = ({ purchase }) => {
+const BuyData = ({ purchase, handlePayment }) => {
 	return (
 		<div>
 			<p className={styles.label}>
@@ -17,7 +17,7 @@ const BuyData = ({ purchase }) => {
 			<div className={styles.products}>
 				{purchase?.products.map((product) => {
 					return (
-						<div className={styles.product}>
+						<div key={product.product_id._id} className={styles.product}>
 							<img
 								src={product.product_id.photo}
 								alt={product.product_id.name}
@@ -30,7 +30,7 @@ const BuyData = ({ purchase }) => {
 			</div>
 			<div className={`${styles.label} ${styles.goPay}`}>
 				<span>Total: {purchase?.total}</span>
-				<button>Comprar</button>
+				<button onClick={handlePayment}>Comprar</button>
 			</div>
 		</div>
 	);

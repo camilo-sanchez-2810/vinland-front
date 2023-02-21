@@ -45,6 +45,11 @@ const Payment = () => {
     await getBuyer()
     setEdit(!edit)
   }
+  const handlePayment = async() => {
+    const data = purchase.products.map(product => ({_id: product.product_id._id, quantity: product.quantity}))
+    const response = await axios.post('http://localhost:8080/api/payment', data, config)
+    window.location.href = response.data.url
+  }
   useEffect(()=> {
     getPurchase()
     getBuyer()
@@ -64,7 +69,7 @@ const Payment = () => {
         </div>
         <div className={styles.pay}>
           <h3 className={styles.title}>datos de la compra</h3>
-          <BuyData purchase={purchase}/>
+          <BuyData purchase={purchase} handlePayment={handlePayment}/>
         </div>
       </div>
     </div>
