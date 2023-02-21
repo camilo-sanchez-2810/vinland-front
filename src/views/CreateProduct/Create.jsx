@@ -14,7 +14,7 @@ export default function Create() {
     const genres = useSelector(store => store.genres.genre)
     const product = useSelector(store => store.product)
     const dispatch = useDispatch()
-    const [value, setValue] = useState()
+    const genreValue = useRef()
     let inputName = useRef()
     let inputPhoto = useRef()
     let inputPrice = useRef()
@@ -29,7 +29,7 @@ export default function Create() {
     const createProduct = async(e) => {
         e.preventDefault()
         let data = {
-            genre: value,
+            genre: genreValue.current.value,
             name: inputName.current.value,
             photo: inputPhoto.current.value,
             price: inputPrice.current.value,
@@ -37,6 +37,7 @@ export default function Create() {
             description: inputDesc.current.value,
             artist: inputArtist.current.value
         }
+        console.log(data)
         const response = await dispatch(create({data, token}))
         console.log(response.payload?.success);
         if(response.payload?.success){
@@ -52,7 +53,7 @@ export default function Create() {
     <div className={style.container}>
         <Anchor to={"/admin-productos"} className={style.anchor}><img src="/assets/images/arrowSolid.png" alt="" /></Anchor>
         <form className={style.form} onSubmit={createProduct}>
-            <select className={style.select} value={ value } onChange={ (event) => setValue( event.target.value ) }>
+            <select className={style.select} ref={genreValue}>
                 {genres?.map(genre => 
                     <option value={genre._id} key={genre._id}>{genre.name}</option>
                     )}
