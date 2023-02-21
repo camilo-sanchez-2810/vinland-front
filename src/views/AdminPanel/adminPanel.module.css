@@ -349,18 +349,25 @@ width: 600px;
 }
 .buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 100px;
     margin-top: 20px;
 }
 .butprevnext{
-    width: 5rem;
-    height: 2rem;
+    width: 8rem;
+    height: 3rem;
     border-radius: 20px;
     border: 1px solid black;
     font-size: 15px;
     background-color: #dfefe6;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+.butprevnext:hover{
+    background-color: #000000;
+    color: white;
 }
 /* .tdLeft{
     width: 10vw;

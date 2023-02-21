@@ -100,7 +100,7 @@ const next = () => {
       <div className={styles.container2}>
         <div className={styles.h2contain}>
           <h3 className={styles.h2Admin}>Productos</h3>
-          <Anchor className={styles.buttonCreate} to={"/create-product"}>Crear Producto</Anchor>
+          
         </div>
         <div className={styles.tableContain}>
         <table className={styles.table1}>
@@ -139,9 +139,10 @@ const next = () => {
                   
             </table>
             <div className={styles.buttons}>
-                    <button className={styles.butprevnext} onClick={prev}>Prev</button>
-                    <button className={styles.butprevnext} onClick={next}>Next</button>
-                </div>
+                    <button className={styles.butprevnext} onClick={prev}>Anterior</button>
+                    <Anchor className={styles.butprevnext} to={"/create-product"}>Crear Producto</Anchor>
+                    <button className={styles.butprevnext} onClick={next}>Siguiente</button>
+            </div>
         </div>
       </div>
     </main>
