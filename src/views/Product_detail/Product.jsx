@@ -89,7 +89,7 @@ export default function Product() {
                     <button className={style.cartbut}> <img  className={style.cartImg} src="/assets/images/cart.png" alt="" /></button>
                     </div>
                     
-                    <p className={style.price}>{product.price}$</p>
+                    <p className={style.price}>{Math.trunc(product.price)}$</p>
                     
                 </div>
             </div>
