@@ -30,7 +30,6 @@ const store = configureStore({
         buyer: buyerReducer,
         alert: alertReducer,
         allProduct: getproductsReducer,
-        buyer: buyerReducer
     }
 })
 
