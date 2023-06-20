@@ -11,7 +11,7 @@ export default function Layout() {
   return (
     <div>
         <Navbar handleShow={handleShow} show={show}/>
-        <Outlet/>
+        <Outlet />
         <Footer/>
     </div>
   )

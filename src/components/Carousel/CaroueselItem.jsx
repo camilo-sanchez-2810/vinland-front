@@ -4,20 +4,18 @@ import style from "./carousel.module.css";
 import { Link as Anchor } from "react-router-dom";
 
 const CaroueselItem = ({ name, description, photo, id }) => {
-	return (
-		<div className={style.carouselObject}>
-			<div className={style.carouselText}>
-				<p className={style.title}>{name}</p>
-				<p className={style.description}>{description}</p>
-			</div>
-			<div>
-				<Slide url={photo} />
-			</div>
-			<div className={style.anchorContainer}>
-				<Anchor to={`/product/${id}`} className={style.anchor}>Ver mas</Anchor>
-			</div>
-		</div>
-	);
+  return (
+    <div className={style.carouselObject}>
+      <Slide url={photo} />
+      <div className={style.carouselText}>
+        <p className={style.title}>{name}</p>
+        <p>{description}</p>
+        <Anchor to={`/product/${id}`} className={style.anchor}>
+          Ver mas
+        </Anchor>
+      </div>
+    </div>
+  );
 };
 
 export default CaroueselItem;

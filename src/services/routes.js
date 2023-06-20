@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../views/Home/Home";
 import Layout from "../layout/Layout";
 import Shopping from "../views/Shopping/Shopping";
-import SignIn from '../views/login/SignIn.jsx';
-import SignUp from '../views/login/SignUp.jsx';
+import { Signup } from "../views/signups/Signup.jsx";
+import SignIn from '../views/login/SignIn'
 import Profile from "../views/Profile/Profile.jsx";
 import Product from "../views/Product_detail/Product";
 import AdminPanel from "../views/AdminPanel/AdminPanel";
@@ -38,7 +38,7 @@ export const indexRouter = createBrowserRouter([
             {
                 path: '/payment/:purchase_id',
                 element: <Payment />
-            }
+            } 
     ]
     },
     {
@@ -47,7 +47,7 @@ export const indexRouter = createBrowserRouter([
     },
     {
         path :"/signup",
-        element: <SignUp />
+        element: <Signup />
     },
     {
         path :"/admin",

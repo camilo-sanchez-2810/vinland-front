@@ -1,43 +1,51 @@
-.container{
-    padding: 10px 10px 30px 10px;
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    z-index: 30;
+
+
+.container {
+  padding: 1rem 3rem;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141412;
 }
-.logo{
-height: 9vh;
+
+.logo {
+  height: 8vh;
 }
-.anchorContainer{
-    height: 10vh;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 30;
+.anchorContainer {
+  height: 10vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 30;
 }
 .cart {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4E3737;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4e3737;
 }
-.anchor{
-    margin: 0 15px 0 15px; 
-    text-decoration: none;
-    color:#4E3737;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 650;
-    transition: color ease .3s;
+.anchor {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+  transition: color ease 0.3s;
+  border-radius: 6px;
+  padding: 5px;
 }
-.anchor:hover{
-    color: #492626;
+.anchor:hover {
+  border-bottom: #ffc6e5 solid 2px;
 }
-.navbar{
-    display: none;
+.anchor:active{
+  border-bottom: #ffc6e5 solid 2px;
+
+}
+.navbar {
+  display: none;
 }
 @media screen and (max-width: 320px) {
   .anchorContainer {
